@@ -30,7 +30,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-isabelline via-white/95 to-mint/5 min-h-screen flex items-center pt-12 sm:pt-16 pb-4 sm:pb-8 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-isabelline via-white/95 to-mint/5 min-h-screen flex items-center pt-8 sm:pt-12 pb-4 sm:pb-6 overflow-hidden">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-40">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-mint/20 to-periwinkle/20 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -48,102 +48,102 @@ const HeroSection = () => {
       }}></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
-          <div className="lg:col-span-1 space-y-3 sm:space-y-6 animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full max-h-screen">
+          <div className="lg:col-span-1 space-y-3 sm:space-y-4 animate-fade-in">
             {/* Badge - Enhanced with video focus */}
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-mint/20 hover:scale-105 transition-all duration-300">
-              <div className="w-2 h-2 bg-mint rounded-full animate-pulse"></div>
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 shadow-lg border border-mint/20 hover:scale-105 transition-all duration-300">
+              <div className="w-1.5 h-1.5 bg-mint rounded-full animate-pulse"></div>
               <span className="font-montserrat text-xs sm:text-sm font-semibold text-night">
                 ✨ Témoignage client en direct
               </span>
             </div>
 
             {/* Main title - ENHANCED TYPOGRAPHY */}
-            <div className="space-y-4 sm:space-y-6">
-              <h1 className="font-basic-sans text-2xl sm:text-4xl lg:text-6xl xl:text-7xl font-black text-night leading-[0.95] tracking-tight">
+            <div className="space-y-2 sm:space-y-3">
+              <h1 className="font-basic-sans text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-night leading-[0.95] tracking-tight">
                 Découvrez comment Tim a{' '}
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-mint via-mint to-periwinkle bg-clip-text text-transparent drop-shadow-sm">
                     multiplié ses avis
                   </span>
-                  <div className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-1.5 sm:h-2 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
+                  <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1 sm:h-1.5 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
                 </span>
                 {' '}par 30
               </h1>
               
-              <p className="font-montserrat text-lg sm:text-xl lg:text-2xl text-night/85 leading-relaxed max-w-2xl font-medium">
+              <p className="font-montserrat text-sm sm:text-base lg:text-lg text-night/85 leading-relaxed max-w-2xl font-medium">
                 De 0 à 95% d'avis positifs en 30 jours avec notre solution e-réputation
               </p>
             </div>
 
-            {/* Metrics - More visual like Bigblue - Hidden on small mobile */}
-            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-sm border border-mint/10 hover:shadow-lg transition-all group">
-                <div className="flex items-center space-x-2 sm:space-x-3 mb-2">
-                  <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-mint group-hover:scale-110 transition-transform" />
-                  <span className="font-basic-sans text-2xl sm:text-3xl font-bold text-mint">
+            {/* Metrics - COMPACT VERSION */}
+            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-sm border border-mint/10 hover:shadow-lg transition-all group">
+                <div className="flex items-center space-x-2 mb-1">
+                  <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
+                  <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">
                     ×{animatedNumbers.avis}
                   </span>
                 </div>
-                <p className="font-montserrat text-xs sm:text-sm text-night/70">plus d'avis</p>
+                <p className="font-montserrat text-xs text-night/70">plus d'avis</p>
               </div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-sm border border-periwinkle/10 hover:shadow-lg transition-all group">
-                <div className="flex items-center space-x-2 sm:space-x-3 mb-2">
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-periwinkle rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-sm border border-periwinkle/10 hover:shadow-lg transition-all group">
+                <div className="flex items-center space-x-2 mb-1">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 bg-periwinkle rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span className="text-white text-xs font-bold">−</span>
                   </div>
-                  <span className="font-basic-sans text-2xl sm:text-3xl font-bold text-periwinkle">
+                  <span className="font-basic-sans text-xl sm:text-2xl font-bold text-periwinkle">
                     {animatedNumbers.negatifs}%
                   </span>
                 </div>
-                <p className="font-montserrat text-xs sm:text-sm text-night/70">d'avis négatifs</p>
+                <p className="font-montserrat text-xs text-night/70">d'avis négatifs</p>
               </div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-sm border border-mint/10 hover:shadow-lg transition-all group sm:col-span-2 lg:col-span-1">
-                <div className="flex items-center space-x-2 sm:space-x-3 mb-2">
-                  <div className="flex space-x-1">
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-sm border border-mint/10 hover:shadow-lg transition-all group">
+                <div className="flex items-center space-x-2 mb-1">
+                  <div className="flex space-x-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-yellow-400 rounded-full group-hover:scale-110 transition-transform" style={{ animationDelay: `${i * 100}ms` }}></div>
+                      <div key={i} className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-yellow-400 rounded-full group-hover:scale-110 transition-transform" style={{ animationDelay: `${i * 100}ms` }}></div>
                     ))}
                   </div>
                 </div>
-                <p className="font-montserrat text-xs sm:text-sm text-night/70">Note moyenne 4,9/5</p>
+                <p className="font-montserrat text-xs text-night/70">Note moyenne 4,9/5</p>
               </div>
             </div>
 
-            {/* Features list - Simplified for mobile */}
-            <div className="space-y-2 sm:space-y-3">
-              <div className="flex items-center space-x-3 sm:space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="bg-mint rounded-full p-1.5 sm:p-2 group-hover:scale-110 transition-transform shadow-sm">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+            {/* Features list - COMPACT */}
+            <div className="space-y-1.5 sm:space-y-2">
+              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300">
+                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-sm">
+                  <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <span className="font-montserrat text-sm sm:text-base lg:text-lg text-night/80">Multi-canal (WhatsApp, SMS, Email)</span>
+                <span className="font-montserrat text-xs sm:text-sm text-night/80">Multi-canal (WhatsApp, SMS, Email)</span>
               </div>
-              <div className="flex items-center space-x-3 sm:space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="bg-mint rounded-full p-1.5 sm:p-2 group-hover:scale-110 transition-transform shadow-sm">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300">
+                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-sm">
+                  <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <span className="font-montserrat text-sm sm:text-base lg:text-lg text-night/80">Routage intelligent des avis</span>
+                <span className="font-montserrat text-xs sm:text-sm text-night/80">Routage intelligent des avis</span>
               </div>
-              <div className="flex items-center space-x-3 sm:space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="bg-mint rounded-full p-1.5 sm:p-2 group-hover:scale-110 transition-transform shadow-sm">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300">
+                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-sm">
+                  <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <span className="font-montserrat text-sm sm:text-base lg:text-lg text-night/80">Compatible Shopify, Gorgias, Klaviyo</span>
+                <span className="font-montserrat text-xs sm:text-sm text-night/80">Compatible Shopify, Gorgias, Klaviyo</span>
               </div>
             </div>
 
-            {/* CTA buttons - Enhanced with video focus */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <Button className="bg-gradient-to-r from-mint to-mint/90 hover:from-mint/90 hover:to-mint text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-xl transition-all hover:scale-105 hover:shadow-2xl group shadow-xl border-2 border-mint/20">
-                <span className="flex items-center space-x-3">
+            {/* CTA buttons - COMPACT */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <Button className="bg-gradient-to-r from-mint to-mint/90 hover:from-mint/90 hover:to-mint text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold rounded-xl transition-all hover:scale-105 hover:shadow-xl group shadow-lg border-2 border-mint/20">
+                <span className="flex items-center space-x-2">
                   <span>Obtenir les mêmes résultats</span>
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
-              <Button variant="outline" className="border-2 border-mint/30 text-night hover:bg-mint hover:text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-semibold flex items-center gap-3 rounded-xl transition-all hover:scale-105 group bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl">
-                <PlayCircle className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
+              <Button variant="outline" className="border-2 border-mint/30 text-night hover:bg-mint hover:text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold flex items-center gap-2 rounded-xl transition-all hover:scale-105 group bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl">
+                <PlayCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 Voir comment ça marche
               </Button>
             </div>
@@ -152,10 +152,10 @@ const HeroSection = () => {
           {/* Right side - STUNNING Premium Video Testimonial */}
           <div className="lg:col-span-1 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
-              {/* Hero video container - ORIGINAL SIZE RESTORED */}
-              <div className="relative group w-full max-w-[650px]">
-                {/* Premium glow effect */}
-                <div className="absolute -inset-8 bg-gradient-to-r from-white/30 via-mint/20 to-periwinkle/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
+              {/* Hero video container - OPTIMIZED FOR ABOVE FOLD */}
+              <div className="relative group w-full max-w-[550px] lg:max-w-[600px]">
+                {/* Premium glow effect - REDUCED */}
+                <div className="absolute -inset-6 bg-gradient-to-r from-white/30 via-mint/20 to-periwinkle/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
                 
                 {/* Main video container - PREMIUM STYLING */}
                 <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 group-hover:scale-[1.01] transition-all duration-700" style={{
