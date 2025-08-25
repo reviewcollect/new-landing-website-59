@@ -147,7 +147,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Featured YouTube Video */}
+          {/* Right side - Featured Video Testimonial */}
           <div className="lg:col-span-6 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
               {/* Video showcase container */}
@@ -155,33 +155,40 @@ const HeroSection = () => {
                 {/* Enhanced glowing background effect */}
                 <div className="absolute -inset-6 bg-gradient-to-r from-mint/20 via-periwinkle/20 to-mint/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700 animate-pulse-slow"></div>
                 
-                {/* Main video container - 16:9 aspect ratio, no letterboxing */}
-                <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[520px] aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-night/5 to-mint/5 border border-white/40 group-hover:scale-[1.02] transition-all duration-700 hover:shadow-3xl">
+                {/* Main video container - RESTORED */}
+                <div className="relative w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[500px] aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-night/5 border border-white/40 group-hover:scale-[1.02] transition-all duration-700 hover:shadow-3xl">
                   
-                  {/* Loading placeholder */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-isabelline via-white to-isabelline flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-mint to-periwinkle rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                        <PlayCircle className="w-8 h-8 text-white" />
-                      </div>
-                      <p className="font-montserrat text-sm text-night/60">Chargement du témoignage...</p>
-                    </div>
-                  </div>
-
-                  {/* YouTube iframe - Enhanced quality settings */}
-                  <iframe
-                    className="absolute inset-0 w-full h-full rounded-2xl"
-                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=1&loop=1&playlist=n44Z4HDah7o&controls=1&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
-                    title="Témoignage Tim - The Bradery - Comment multiplier ses avis clients par 30"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="eager"
-                    style={{ 
-                      borderRadius: '1rem',
-                      objectFit: 'cover'
+                  {/* Video player - WITH SOUND ENABLED */}
+                  <video
+                    className="w-full h-full object-cover rounded-2xl"
+                    autoPlay
+                    loop
+                    playsInline
+                    controls
+                    preload="auto"
+                    style={{ borderRadius: '1rem' }}
+                    onError={(e) => {
+                      console.warn('Video failed to load, trying fallback:', e);
                     }}
-                  ></iframe>
+                  >
+                    {/* Primary source - Tella.tv direct link */}
+                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c" type="video/mp4" />
+                    
+                    {/* Fallback sources */}
+                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.mp4" type="video/mp4" />
+                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.webm" type="video/webm" />
+                    
+                    {/* Fallback content if video doesn't load */}
+                    <div className="w-full h-full bg-gradient-to-br from-isabelline via-white to-isabelline flex items-center justify-center rounded-2xl">
+                      <div className="text-center p-8">
+                        <div className="w-20 h-20 bg-gradient-to-r from-mint to-periwinkle rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+                          <PlayCircle className="w-10 h-10 text-white" />
+                        </div>
+                        <h3 className="font-basic-sans text-lg font-bold text-night mb-2">Témoignage Tim - The Bradery</h3>
+                        <p className="font-montserrat text-sm text-night/60">Chargement de la vidéo...</p>
+                      </div>
+                    </div>
+                  </video>
 
                   {/* Company context overlay - Top left */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg border border-mint/20 opacity-90 group-hover:opacity-100 transition-opacity">
@@ -200,13 +207,13 @@ const HeroSection = () => {
                   <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg px-3 py-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
                     <div className="flex items-center space-x-1">
                       <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                      <span className="font-montserrat text-xs font-bold text-white">HD</span>
+                      <span className="font-montserrat text-xs font-bold text-white">🔊 HD</span>
                     </div>
                   </div>
                 </div>
                 
-                {/* Repositioned floating metrics - Away from speaker's face */}
-                <div className="absolute -top-8 -right-8 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/30 animate-float">
+                {/* Floating metrics - POSITIONED AS OVERLAYS ON VIDEO */}
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/30 animate-float z-10">
                   <div className="flex items-center space-x-3">
                     <TrendingUp className="w-5 h-5 text-white" />
                     <div className="text-white">
@@ -216,7 +223,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-8 -left-8 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/30 animate-float" style={{ animationDelay: '1s' }}>
+                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/30 animate-float z-10" style={{ animationDelay: '1s' }}>
                   <div className="flex items-center space-x-3">
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
@@ -230,32 +237,31 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                {/* Left side metric */}
-                <div className="absolute top-1/3 -left-10 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-mint/20 animate-float" style={{ animationDelay: '2s' }}>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-mint" />
+                {/* Additional floating metrics */}
+                <div className="absolute top-1/4 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-2xl border border-mint/20 animate-float z-10" style={{ animationDelay: '2s' }}>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-mint" />
                     <div className="text-night">
-                      <div className="font-basic-sans text-lg font-bold">30j</div>
+                      <div className="font-basic-sans text-sm font-bold">30j</div>
                       <div className="font-montserrat text-xs opacity-70">résultats</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Right side metric */}
-                <div className="absolute bottom-1/3 -right-10 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-periwinkle/20 animate-float" style={{ animationDelay: '3s' }}>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                <div className="absolute top-1/4 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-2xl border border-periwinkle/20 animate-float z-10" style={{ animationDelay: '3s' }}>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
                       <span className="text-white text-xs font-bold">✓</span>
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-lg font-bold">95%</div>
+                      <div className="font-basic-sans text-sm font-bold">95%</div>
                       <div className="font-montserrat text-xs opacity-70">positifs</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Bottom testimonial context */}
-                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-6 py-2 shadow-lg border border-white/30">
+                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-6 py-2 shadow-lg border border-white/30 z-10">
                   <div className="flex items-center space-x-2">
                     <PlayCircle className="w-4 h-4 text-mint" />
                     <span className="font-montserrat text-sm font-medium text-night">
