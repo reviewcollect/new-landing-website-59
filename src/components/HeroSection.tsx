@@ -104,10 +104,10 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full max-h-screen">
           <div className="lg:col-span-1 space-y-3 sm:space-y-4 animate-fade-in">
             {/* Premium Badge - PODCAST EXCLUSIF */}
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 shadow-lg border border-mint/30 hover:scale-105 transition-all duration-300 animate-glow">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 shadow-lg border border-mint/30 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-1.5">
-                <Radio className="w-3 h-3 text-red-500 animate-pulse" />
-                <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
+                <Radio className="w-3 h-3 text-red-500" />
+                <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
               </div>
               <span className="font-montserrat text-xs sm:text-sm font-bold text-night">
                 🎙️ Podcast exclusif - LIVE
@@ -122,7 +122,7 @@ const HeroSection = () => {
                   <span className="bg-gradient-to-r from-mint via-mint to-periwinkle bg-clip-text text-transparent drop-shadow-sm">
                     multiplié ses avis
                   </span>
-                  <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1 sm:h-1.5 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg animate-glow"></div>
+                  <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1 sm:h-1.5 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
                 </span>
                 {' '}par 30
               </h1>
@@ -265,7 +265,7 @@ const HeroSection = () => {
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-b-3xl p-4 sm:p-6">
                     <div className="text-center">
                       <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-3 animate-fade-in" style={{ animationDelay: '2s' }}>
-                        <div className="w-2 h-2 bg-mint rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-mint rounded-full"></div>
                         <span className="text-white font-montserrat text-sm font-medium">Citation clé</span>
                       </div>
                       <blockquote className="text-white font-basic-sans text-lg sm:text-xl lg:text-2xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '2.5s' }}>
@@ -283,7 +283,7 @@ const HeroSection = () => {
                       className="absolute inset-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 bg-black/20 rounded-3xl cursor-pointer z-10"
                       onClick={handlePlayVideo}
                     >
-                      <div className="bg-white/15 backdrop-blur-sm rounded-full p-6 border border-white/30 hover:scale-110 transition-transform duration-300 animate-pulse shadow-2xl">
+                      <div className="bg-white/15 backdrop-blur-sm rounded-full p-6 border border-white/30 hover:scale-110 transition-transform duration-300 shadow-2xl">
                         <PlayCircle className="w-16 h-16 text-white drop-shadow-2xl" />
                       </div>
                     </div>
