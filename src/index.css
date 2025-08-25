@@ -224,7 +224,7 @@ html {
   transform: translateY(-2px) scale(1.02);
 }
 
-/* Premium Gradients - Enhanced */
+/* Enhanced Premium Gradients */
 .gradient-premium {
   background: linear-gradient(135deg, #31C19E 0%, #E5D1FE 100%);
 }
@@ -242,6 +242,16 @@ html {
 
 .gradient-radial {
   background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Premium breathing animation for cards */
+@keyframes breathe {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
 }
 
 /* Enhanced Button Styles - Bigblue inspired */
