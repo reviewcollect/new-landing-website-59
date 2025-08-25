@@ -147,127 +147,78 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - MASSIVE Featured Video Testimonial */}
+          {/* Right side - Clean Video Testimonial */}
           <div className="lg:col-span-1 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
-              {/* Video showcase container - MAXIMUM SIZE */}
-              <div className="relative group w-full">
-                {/* Enhanced glowing background effect - LARGER */}
-                <div className="absolute -inset-12 bg-gradient-to-r from-mint/25 via-periwinkle/25 to-mint/25 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-700 animate-pulse-slow"></div>
+              {/* Video container - Clean and simple */}
+              <div className="relative group w-full max-w-[500px]">
+                {/* Subtle background glow */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-mint/15 to-periwinkle/15 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
                 
-                {/* MAIN VIDEO CONTAINER - HUGE AND PROMINENT */}
-                <div className="relative w-full min-w-[400px] max-w-none aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.02] transition-all duration-700 hover:shadow-4xl">
+                {/* Main video container */}
+                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-xl bg-white border border-white/50 group-hover:scale-[1.02] transition-all duration-500">
                   
-                  {/* YouTube iframe - FULL CONTAINER WIDTH WITH HIDDEN CONTROLS */}
+                  {/* YouTube iframe */}
                   <iframe
-                    className="w-full h-full rounded-3xl"
-                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
-                    title="Témoignage Tim - The Bradery - Comment multiplier ses avis clients par 30"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=1&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1"
+                    title="Témoignage Tim - The Bradery"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
-                    loading="eager"
-                    style={{ 
-                      borderRadius: '1.5rem'
-                    }}
-                    onMouseEnter={(e) => {
-                      const iframe = e.currentTarget;
-                      iframe.src = iframe.src.replace('controls=0', 'controls=1');
-                    }}
-                    onMouseLeave={(e) => {
-                      const iframe = e.currentTarget;
-                      iframe.src = iframe.src.replace('controls=1', 'controls=0');
-                    }}
                   ></iframe>
 
-                  {/* Subtle duration indicator - Top left corner */}
-                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-lg px-3 py-1 opacity-70 hover:opacity-90 transition-opacity z-30">
-                    <span className="font-montserrat text-xs font-medium text-white">2:15</span>
+                  {/* Duration indicator */}
+                  <div className="absolute top-3 left-3 bg-black/70 rounded-md px-2 py-1">
+                    <span className="text-white text-xs font-medium">2:15</span>
                   </div>
                 </div>
                 
-                {/* PERFECTLY SPACED OVERLAY CARDS - NO OVERLAPPING */}
+                {/* Clean overlay cards - Well spaced */}
                 
-                {/* TOP-RIGHT: ×30 plus d'avis - HERO METRIC (LARGER) */}
-                <div className="absolute -top-12 -right-12 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-xl p-7 shadow-lg border border-white/30 animate-float z-30">
-                  <div className="flex items-center space-x-4">
-                    <TrendingUp className="w-9 h-9 text-white drop-shadow-sm" />
-                    <div className="text-white">
-                      <div className="font-basic-sans text-5xl font-bold drop-shadow-sm">×30</div>
-                      <div className="font-montserrat text-base opacity-95 font-semibold">plus d'avis</div>
+                {/* Top right - Main metric */}
+                <div className="absolute -top-4 -right-4 bg-mint rounded-xl p-4 shadow-lg animate-float">
+                  <div className="text-white text-center">
+                    <div className="flex items-center gap-2 mb-1">
+                      <TrendingUp className="w-4 h-4" />
+                      <span className="font-bold text-2xl">×30</span>
                     </div>
+                    <div className="text-xs opacity-90">plus d'avis</div>
                   </div>
                 </div>
                 
-                {/* TOP-LEFT: 95% positifs - ENHANCED CONTRAST */}
-                <div className="absolute -top-12 -left-12 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/30 animate-float z-30" style={{ animationDelay: '1s' }}>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center shadow-md">
-                      <span className="text-white text-lg font-bold drop-shadow-sm">✓</span>
+                {/* Top left - Success metric */}
+                <div className="absolute -top-4 -left-4 bg-periwinkle rounded-xl p-4 shadow-lg animate-float" style={{ animationDelay: '0.5s' }}>
+                  <div className="text-white text-center">
+                    <div className="flex items-center gap-2 mb-1">
+                      <CheckCircle className="w-4 h-4" />
+                      <span className="font-bold text-2xl">95%</span>
                     </div>
-                    <div className="text-white">
-                      <div className="font-basic-sans text-4xl font-bold drop-shadow-sm">95%</div>
-                      <div className="font-montserrat text-base opacity-95 font-semibold">positifs</div>
-                    </div>
+                    <div className="text-xs opacity-90">positifs</div>
                   </div>
                 </div>
 
-                {/* BOTTOM-RIGHT: 4.9/5 satisfaction - MOVED UP */}
-                <div className="absolute -bottom-16 -right-12 bg-white/96 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-mint/20 animate-float z-30" style={{ animationDelay: '2s' }}>
-                  <div className="flex items-center space-x-4">
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-5 h-5 bg-yellow-400 rounded-full shadow-sm"></div>
-                      ))}
+                {/* Bottom right - Rating */}
+                <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
+                  <div className="text-night text-center">
+                    <div className="flex items-center gap-1 mb-1">
+                      <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div className="font-bold text-lg">4.9/5</div>
+                    <div className="text-xs opacity-70">satisfaction</div>
+                  </div>
+                </div>
+
+                {/* Bottom left - Company info */}
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-lg animate-float" style={{ animationDelay: '1.5s' }}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-mint to-periwinkle rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">TB</span>
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-3xl font-bold">4.9/5</div>
-                      <div className="font-montserrat text-base opacity-80 font-semibold">satisfaction</div>
+                      <div className="font-bold text-sm">The Bradery</div>
+                      <div className="text-xs opacity-70">Fondateur</div>
                     </div>
-                  </div>
-                </div>
-
-                {/* BOTTOM-LEFT: Company testimonial context - MOVED FURTHER LEFT */}
-                <div className="absolute -bottom-12 -left-16 bg-white/96 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-periwinkle/20 animate-float z-30" style={{ animationDelay: '3s' }}>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-mint to-periwinkle rounded-xl flex items-center justify-center shadow-md">
-                      <span className="text-white text-lg font-bold">TB</span>
-                    </div>
-                    <div className="text-night">
-                      <div className="font-basic-sans text-xl font-bold">The Bradery</div>
-                      <div className="font-montserrat text-sm opacity-70 font-medium">Fondateur & CEO</div>
-                      <div className="font-montserrat text-xs opacity-60 font-medium mt-1">Témoignage authentique</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Mobile-only overlay adjustments */}
-                <div className="absolute inset-0 lg:hidden">
-                  {/* Simplified mobile overlays */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
-                    <div className="text-white text-center">
-                      <div className="font-basic-sans text-2xl font-bold">×30</div>
-                      <div className="font-montserrat text-xs opacity-90">avis</div>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
-                    <div className="text-night text-center">
-                      <div className="font-basic-sans text-lg font-bold">4.9★</div>
-                      <div className="font-montserrat text-xs opacity-70">satisfaction</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* AUDIO/QUALITY INDICATOR - Removed HD badge for cleaner look */}
-                
-                {/* BOTTOM CENTER: Minimalist authenticity badge */}
-                <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-8 py-3 shadow-md border border-white/30 z-20 opacity-80 hover:opacity-100 transition-opacity">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                    <span className="font-montserrat text-sm font-medium text-night/80">
-                      En direct • Témoignage authentique
-                    </span>
                   </div>
                 </div>
               </div>
