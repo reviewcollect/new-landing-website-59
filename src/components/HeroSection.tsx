@@ -46,8 +46,8 @@ const HeroSection = () => {
       }}></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center w-full">
-          <div className="lg:col-span-6 space-y-3 sm:space-y-6 animate-fade-in">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center w-full">
+          <div className="lg:col-span-3 space-y-3 sm:space-y-6 animate-fade-in">
             {/* Badge - Enhanced with video focus */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-mint/20 hover:scale-105 transition-all duration-300">
               <div className="w-2 h-2 bg-mint rounded-full animate-pulse"></div>
@@ -147,26 +147,26 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Featured Video Testimonial */}
-          <div className="lg:col-span-6 relative animate-slide-up order-first lg:order-last">
+          {/* Right side - LARGE Featured Video Testimonial */}
+          <div className="lg:col-span-2 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
-              {/* Video showcase container */}
+              {/* Video showcase container - SIGNIFICANTLY ENLARGED */}
               <div className="relative group">
                 {/* Enhanced glowing background effect */}
-                <div className="absolute -inset-6 bg-gradient-to-r from-mint/20 via-periwinkle/20 to-mint/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700 animate-pulse-slow"></div>
+                <div className="absolute -inset-8 bg-gradient-to-r from-mint/25 via-periwinkle/25 to-mint/25 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-700 animate-pulse-slow"></div>
                 
-                {/* Main video container - RESTORED */}
-                <div className="relative w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[500px] aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-night/5 border border-white/40 group-hover:scale-[1.02] transition-all duration-700 hover:shadow-3xl">
+                {/* MAIN VIDEO CONTAINER - MUCH LARGER AND PROMINENT */}
+                <div className="relative w-full max-w-[450px] sm:max-w-[500px] lg:max-w-[550px] aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.03] transition-all duration-700 hover:shadow-4xl">
                   
-                  {/* Video player - WITH SOUND ENABLED */}
+                  {/* Video player - LARGE AND PROMINENT */}
                   <video
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-full object-cover rounded-3xl brightness-110 contrast-105"
                     autoPlay
                     loop
                     playsInline
                     controls
                     preload="auto"
-                    style={{ borderRadius: '1rem' }}
+                    style={{ borderRadius: '1.5rem' }}
                     onError={(e) => {
                       console.warn('Video failed to load, trying fallback:', e);
                     }}
@@ -179,93 +179,86 @@ const HeroSection = () => {
                     <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.webm" type="video/webm" />
                     
                     {/* Fallback content if video doesn't load */}
-                    <div className="w-full h-full bg-gradient-to-br from-isabelline via-white to-isabelline flex items-center justify-center rounded-2xl">
+                    <div className="w-full h-full bg-gradient-to-br from-isabelline via-white to-mint/10 flex items-center justify-center rounded-3xl border-2 border-mint/20">
                       <div className="text-center p-8">
-                        <div className="w-20 h-20 bg-gradient-to-r from-mint to-periwinkle rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
-                          <PlayCircle className="w-10 h-10 text-white" />
+                        <div className="w-24 h-24 bg-gradient-to-r from-mint to-periwinkle rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse shadow-xl">
+                          <PlayCircle className="w-12 h-12 text-white" />
                         </div>
-                        <h3 className="font-basic-sans text-lg font-bold text-night mb-2">Témoignage Tim - The Bradery</h3>
-                        <p className="font-montserrat text-sm text-night/60">Chargement de la vidéo...</p>
+                        <h3 className="font-basic-sans text-xl font-bold text-night mb-3">Témoignage Tim - The Bradery</h3>
+                        <p className="font-montserrat text-base text-night/60">Chargement de la vidéo testimoniale...</p>
                       </div>
                     </div>
                   </video>
-
-                  {/* Company context overlay - Top left */}
-                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg border border-mint/20 opacity-90 group-hover:opacity-100 transition-opacity">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 bg-gradient-to-r from-mint to-periwinkle rounded-lg flex items-center justify-center">
-                        <span className="text-white text-xs font-bold">TB</span>
-                      </div>
-                      <div>
-                        <div className="font-basic-sans text-sm font-bold text-night">The Bradery</div>
-                        <div className="font-montserrat text-xs text-night/70">Témoignage client</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Video quality indicator - Top right */}
-                  <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg px-3 py-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div className="flex items-center space-x-1">
-                      <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                      <span className="font-montserrat text-xs font-bold text-white">🔊 HD</span>
-                    </div>
-                  </div>
                 </div>
                 
-                {/* Floating metrics - POSITIONED AS OVERLAYS ON VIDEO */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/30 animate-float z-10">
+                {/* PROPERLY SEPARATED OVERLAY CARDS - NO OVERLAPPING */}
+                
+                {/* TOP-RIGHT: ×30 plus d'avis */}
+                <div className="absolute -top-6 -right-6 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/40 animate-float z-20">
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-5 h-5 text-white" />
+                    <TrendingUp className="w-6 h-6 text-white" />
                     <div className="text-white">
-                      <div className="font-basic-sans text-xl font-bold">×30</div>
-                      <div className="font-montserrat text-xs opacity-90">plus d'avis</div>
+                      <div className="font-basic-sans text-2xl font-bold">×30</div>
+                      <div className="font-montserrat text-xs opacity-90 font-medium">plus d'avis</div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/30 animate-float z-10" style={{ animationDelay: '1s' }}>
+                {/* TOP-LEFT: 95% positifs */}
+                <div className="absolute -top-6 -left-6 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/40 animate-float z-20" style={{ animationDelay: '1s' }}>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div className="text-white">
+                      <div className="font-basic-sans text-2xl font-bold">95%</div>
+                      <div className="font-montserrat text-xs opacity-90 font-medium">positifs</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* BOTTOM-RIGHT: 4.9/5 satisfaction */}
+                <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-mint/30 animate-float z-20" style={{ animationDelay: '2s' }}>
                   <div className="flex items-center space-x-3">
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-3 h-3 bg-yellow-300 rounded-full"></div>
+                        <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full shadow-sm"></div>
                       ))}
                     </div>
-                    <div className="text-white">
+                    <div className="text-night">
                       <div className="font-basic-sans text-xl font-bold">4.9/5</div>
-                      <div className="font-montserrat text-xs opacity-90">satisfaction</div>
+                      <div className="font-montserrat text-xs opacity-70 font-medium">satisfaction</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Additional floating metrics */}
-                <div className="absolute top-1/4 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-2xl border border-mint/20 animate-float z-10" style={{ animationDelay: '2s' }}>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-mint" />
-                    <div className="text-night">
-                      <div className="font-basic-sans text-sm font-bold">30j</div>
-                      <div className="font-montserrat text-xs opacity-70">résultats</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute top-1/4 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-2xl border border-periwinkle/20 animate-float z-10" style={{ animationDelay: '3s' }}>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
+                {/* BOTTOM-LEFT: Company testimonial context */}
+                <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-periwinkle/30 animate-float z-20" style={{ animationDelay: '3s' }}>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-lg">
+                      <span className="text-white text-xs font-bold">TB</span>
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-sm font-bold">95%</div>
-                      <div className="font-montserrat text-xs opacity-70">positifs</div>
+                      <div className="font-basic-sans text-sm font-bold">The Bradery</div>
+                      <div className="font-montserrat text-xs opacity-70 font-medium">Témoignage</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Bottom testimonial context */}
-                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-6 py-2 shadow-lg border border-white/30 z-10">
+                {/* AUDIO/QUALITY INDICATOR - Inside video, top-right corner */}
+                <div className="absolute top-4 right-4 bg-black/90 backdrop-blur-sm rounded-xl px-4 py-2 shadow-xl border border-white/20 opacity-90 group-hover:opacity-100 transition-opacity z-30">
                   <div className="flex items-center space-x-2">
-                    <PlayCircle className="w-4 h-4 text-mint" />
-                    <span className="font-montserrat text-sm font-medium text-night">
-                      Témoignage authentique • The Bradery
+                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                    <span className="font-montserrat text-xs font-bold text-white">🔊 HD</span>
+                  </div>
+                </div>
+
+                {/* BOTTOM CENTER: Authenticity badge */}
+                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/20 to-periwinkle/20 backdrop-blur-sm rounded-full px-8 py-3 shadow-xl border border-white/40 z-20">
+                  <div className="flex items-center space-x-3">
+                    <PlayCircle className="w-5 h-5 text-mint" />
+                    <span className="font-montserrat text-sm font-semibold text-night">
+                      Témoignage authentique • En direct
                     </span>
                   </div>
                 </div>
