@@ -184,73 +184,73 @@ const HeroSection = () => {
                   ></iframe>
                 </div>
                 
-                {/* PREMIUM Overlay Cards - ENHANCED */}
+                {/* SUBTLE Overlay Cards - SCALED DOWN 40% */}
                 
-                {/* Hero Metric - ×30 (TOP RIGHT) - ENHANCED */}
-                <div className="absolute -top-6 -right-6 group/card animate-float">
-                  <div className="bg-gradient-to-br from-mint via-mint to-mint/90 rounded-2xl p-6 transform group-hover/card:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 15px 35px rgba(49, 193, 158, 0.25), 0 5px 15px rgba(0,0,0,0.1)'
+                {/* Hero Metric - ×30 (TOP RIGHT) - REDUCED SIZE */}
+                <div className="absolute -top-4 -right-4 group/card animate-float">
+                  <div className="bg-gradient-to-br from-mint via-mint to-mint/90 rounded-xl p-3 transform group-hover/card:scale-105 transition-all duration-500" style={{
+                    boxShadow: '0 8px 20px rgba(49, 193, 158, 0.2), 0 3px 8px rgba(0,0,0,0.08)'
                   }}>
                     <div className="text-white text-center">
-                      <div className="flex items-center justify-center gap-3 mb-2">
-                        <TrendingUp className="w-6 h-6 drop-shadow-sm" />
-                        <span className="font-basic-sans text-4xl font-black drop-shadow-sm">×30</span>
+                      <div className="flex items-center justify-center gap-2 mb-1">
+                        <TrendingUp className="w-3 h-3 drop-shadow-sm" />
+                        <span className="font-basic-sans text-xl font-bold drop-shadow-sm">×30</span>
                       </div>
-                      <div className="font-montserrat text-sm font-semibold opacity-95">plus d'avis</div>
+                      <div className="font-montserrat text-xs font-medium opacity-90">plus d'avis</div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Success Metric - 95% (TOP LEFT) */}
-                <div className="absolute -top-6 -left-6 animate-float" style={{ animationDelay: '0.5s' }}>
-                  <div className="bg-gradient-to-br from-periwinkle via-periwinkle to-periwinkle/90 rounded-2xl p-6 hover:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 15px 35px rgba(229, 209, 254, 0.25), 0 5px 15px rgba(0,0,0,0.1)'
+                {/* Success Metric - 95% (TOP LEFT) - REDUCED SIZE */}
+                <div className="absolute -top-4 -left-4 animate-float" style={{ animationDelay: '0.5s' }}>
+                  <div className="bg-gradient-to-br from-periwinkle via-periwinkle to-periwinkle/90 rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
+                    boxShadow: '0 8px 20px rgba(229, 209, 254, 0.2), 0 3px 8px rgba(0,0,0,0.08)'
                   }}>
                     <div className="text-white text-center">
-                      <div className="flex items-center justify-center gap-3 mb-2">
-                        <CheckCircle className="w-6 h-6 drop-shadow-sm" />
-                        <span className="font-basic-sans text-4xl font-black drop-shadow-sm">95%</span>
+                      <div className="flex items-center justify-center gap-2 mb-1">
+                        <CheckCircle className="w-3 h-3 drop-shadow-sm" />
+                        <span className="font-basic-sans text-xl font-bold drop-shadow-sm">95%</span>
                       </div>
-                      <div className="font-montserrat text-sm font-semibold opacity-95">positifs</div>
+                      <div className="font-montserrat text-xs font-medium opacity-90">positifs</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Rating Card - 4.9/5 (BOTTOM RIGHT) */}
-                <div className="absolute -bottom-6 -right-6 animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 hover:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.05)'
+                {/* Rating Card - 4.9/5 (BOTTOM RIGHT) - REDUCED SIZE */}
+                <div className="absolute -bottom-4 -right-4 animate-float" style={{ animationDelay: '1s' }}>
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
+                    boxShadow: '0 8px 20px rgba(0,0,0,0.06), 0 3px 8px rgba(0,0,0,0.04)'
                   }}>
                     <div className="text-night text-center">
-                      <div className="flex items-center justify-center gap-1 mb-2">
-                        <span className="text-2xl">⭐⭐⭐⭐⭐</span>
+                      <div className="flex items-center justify-center gap-0.5 mb-1">
+                        <span className="text-base">⭐⭐⭐⭐⭐</span>
                       </div>
-                      <div className="font-basic-sans text-2xl font-black">4.9/5</div>
-                      <div className="font-montserrat text-sm font-semibold opacity-70">satisfaction</div>
+                      <div className="font-basic-sans text-lg font-bold">4.9/5</div>
+                      <div className="font-montserrat text-xs font-medium opacity-70">satisfaction</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Company Card - The Bradery (BOTTOM LEFT) */}
-                <div className="absolute -bottom-6 -left-6 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 hover:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.05)'
+                {/* Company Card - The Bradery (BOTTOM LEFT) - REDUCED SIZE */}
+                <div className="absolute -bottom-4 -left-4 animate-float" style={{ animationDelay: '1.5s' }}>
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
+                    boxShadow: '0 8px 20px rgba(0,0,0,0.06), 0 3px 8px rgba(0,0,0,0.04)'
                   }}>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-mint to-periwinkle rounded-xl flex items-center justify-center shadow-lg">
-                        <span className="text-white text-lg font-black">TB</span>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-md">
+                        <span className="text-white text-sm font-bold">TB</span>
                       </div>
                       <div className="text-night">
-                        <div className="font-basic-sans text-lg font-black">The Bradery</div>
-                        <div className="font-montserrat text-sm font-semibold opacity-70">Fondateur</div>
+                        <div className="font-basic-sans text-sm font-bold">The Bradery</div>
+                        <div className="font-montserrat text-xs font-medium opacity-70">Fondateur</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Subtle duration indicator */}
-                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm rounded-xl px-3 py-2 opacity-80 hover:opacity-100 transition-opacity">
-                  <span className="text-white text-sm font-semibold">2:15</span>
+                {/* Subtle duration indicator - SMALLER */}
+                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-sm rounded-lg px-2 py-1 opacity-80 hover:opacity-100 transition-opacity">
+                  <span className="text-white text-xs font-medium">2:15</span>
                 </div>
               </div>
             </div>
