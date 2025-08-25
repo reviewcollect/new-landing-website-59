@@ -215,7 +215,7 @@ html {
   transform: translateY(-2px) scale(1.02);
 }
 
-/* Premium Gradients - Bigblue style */
+/* Premium Gradients - Enhanced */
 .gradient-premium {
   background: linear-gradient(135deg, #31C19E 0%, #E5D1FE 100%);
 }
@@ -229,6 +229,10 @@ html {
 
 .gradient-subtle {
   background: linear-gradient(135deg, rgba(49, 193, 158, 0.1) 0%, rgba(229, 209, 254, 0.1) 100%);
+}
+
+.gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
 /* Enhanced Button Styles - Bigblue inspired */
