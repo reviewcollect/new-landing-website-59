@@ -8,21 +8,46 @@ const HeroSection = () => {
   const [viewCount] = useState(2847);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [showPlayButton, setShowPlayButton] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Détecter si on est sur mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handlePlayVideo = () => {
+    console.log('Bouton play cliqué, isMobile:', isMobile);
     const iframe = document.querySelector('iframe[title="Témoignage Tim - The Bradery"]') as HTMLIFrameElement;
     if (iframe) {
+      console.log('iframe trouvé');
       const currentSrc = iframe.src;
-      // Force autoplay and unmute
-      const newSrc = currentSrc.replace('autoplay=1&mute=0', 'autoplay=1&mute=0').replace('controls=0', 'controls=1');
+      
+      // Pour mobile : forcer mute=1 à cause des restrictions d'autoplay
+      const muteParam = isMobile ? 'mute=1' : 'mute=0';
+      let newSrc = currentSrc.replace(/mute=[01]/, muteParam);
+      
+      // S'assurer que autoplay est activé et contrôles visibles
+      newSrc = newSrc.replace(/autoplay=[01]/, 'autoplay=1');
+      newSrc = newSrc.replace(/controls=[01]/, 'controls=1');
+      
+      console.log('Nouvelle URL:', newSrc);
       iframe.src = newSrc;
+      
       setIsVideoPlaying(true);
       setShowPlayButton(false);
       
-      // Show controls on play
-      setTimeout(() => {
-        iframe.src = iframe.src.replace('controls=0', 'controls=1');
-      }, 100);
+      // Sur mobile, scroll vers la vidéo pour une meilleure UX
+      if (isMobile) {
+        iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } else {
+      console.error('iframe non trouvé');
     }
   };
 
@@ -218,7 +243,7 @@ const HeroSection = () => {
                   {/* YouTube iframe */}
                   <iframe
                     className="w-full h-full rounded-3xl"
-                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0"
+                    src={`https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=${isMobile ? '1' : '0'}&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0`}
                     title="Témoignage Tim - The Bradery"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
