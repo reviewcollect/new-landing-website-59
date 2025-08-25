@@ -6,6 +6,25 @@ import { PlayCircle, CheckCircle, MessageSquare, Smartphone, Mail, TrendingUp, A
 const HeroSection = () => {
   const [animatedNumbers, setAnimatedNumbers] = useState({ avis: 0, negatifs: 0, trustpilot: 3.4 });
   const [viewCount] = useState(2847);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [showPlayButton, setShowPlayButton] = useState(true);
+
+  const handlePlayVideo = () => {
+    const iframe = document.querySelector('iframe[title="Témoignage Tim - The Bradery"]') as HTMLIFrameElement;
+    if (iframe) {
+      const currentSrc = iframe.src;
+      // Force autoplay and unmute
+      const newSrc = currentSrc.replace('autoplay=1&mute=0', 'autoplay=1&mute=0').replace('controls=0', 'controls=1');
+      iframe.src = newSrc;
+      setIsVideoPlaying(true);
+      setShowPlayButton(false);
+      
+      // Show controls on play
+      setTimeout(() => {
+        iframe.src = iframe.src.replace('controls=0', 'controls=1');
+      }, 100);
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -159,7 +178,12 @@ const HeroSection = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
-              <Button variant="outline" className="border-2 border-mint/40 text-night hover:bg-mint hover:text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold flex items-center gap-2 rounded-xl transition-all hover:scale-105 group bg-white/95 backdrop-blur-sm shadow-xl hover:shadow-2xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <Button 
+                variant="outline" 
+                className="border-2 border-mint/40 text-night hover:bg-mint hover:text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold flex items-center gap-2 rounded-xl transition-all hover:scale-105 group bg-white/95 backdrop-blur-sm shadow-xl hover:shadow-2xl animate-fade-in" 
+                style={{ animationDelay: '0.1s' }}
+                onClick={handlePlayVideo}
+              >
                 <PlayCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 Voir l'interview complète
               </Button>
@@ -229,11 +253,16 @@ const HeroSection = () => {
                   </div>
 
                   {/* PREMIUM CUSTOM PLAY BUTTON OVERLAY */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black/20 rounded-3xl">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/30 hover:scale-110 transition-transform duration-300 animate-pulse">
-                      <PlayCircle className="w-12 h-12 text-white drop-shadow-lg" />
+                  {showPlayButton && (
+                    <div 
+                      className="absolute inset-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 bg-black/20 rounded-3xl cursor-pointer z-10"
+                      onClick={handlePlayVideo}
+                    >
+                      <div className="bg-white/15 backdrop-blur-sm rounded-full p-6 border border-white/30 hover:scale-110 transition-transform duration-300 animate-pulse shadow-2xl">
+                        <PlayCircle className="w-16 h-16 text-white drop-shadow-2xl" />
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 
                 {/* OPTIMIZED Overlay Cards - MOBILE PERFECTED */}
