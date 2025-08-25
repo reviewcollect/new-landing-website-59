@@ -152,19 +152,19 @@ const HeroSection = () => {
           {/* Right side - STUNNING Premium Video Testimonial */}
           <div className="lg:col-span-1 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
-              {/* Hero video container - ENLARGED 30% */}
-              <div className="relative group w-full max-w-[650px]">
-                {/* Premium glow effect */}
-                <div className="absolute -inset-8 bg-gradient-to-r from-white/30 via-mint/20 to-periwinkle/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
+              {/* Hero video container - RESPONSIVE */}
+              <div className="relative group w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[650px]">
+                {/* Premium glow effect - RESPONSIVE */}
+                <div className="absolute -inset-4 lg:-inset-8 bg-gradient-to-r from-white/30 via-mint/20 to-periwinkle/20 rounded-2xl lg:rounded-3xl blur-xl lg:blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
                 
-                {/* Main video container - PREMIUM STYLING */}
-                <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 group-hover:scale-[1.01] transition-all duration-700" style={{
-                  boxShadow: '0 30px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.8), inset 0 1px 0 rgba(255,255,255,0.9)'
+                {/* Main video container - MOBILE OPTIMIZED */}
+                <div className="relative w-full aspect-[16/9] rounded-2xl lg:rounded-3xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 group-hover:scale-[1.01] transition-all duration-700" style={{
+                  boxShadow: '0 15px 30px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.8), inset 0 1px 0 rgba(255,255,255,0.9)'
                 }}>
                   
-                  {/* YouTube iframe - NO TECHNICAL ELEMENTS */}
+                  {/* YouTube iframe */}
                   <iframe
-                    className="w-full h-full rounded-3xl"
+                    className="w-full h-full rounded-2xl lg:rounded-3xl"
                     src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0"
                     title="Témoignage Tim - The Bradery"
                     frameBorder="0"
@@ -179,78 +179,133 @@ const HeroSection = () => {
                       iframe.src = iframe.src.replace('controls=1', 'controls=0');
                     }}
                     style={{ 
-                      borderRadius: '1.5rem'
+                      borderRadius: '1rem'
                     }}
                   ></iframe>
                 </div>
                 
-                {/* SUBTLE Overlay Cards - SCALED DOWN 40% */}
+                {/* MOBILE-FIRST Overlay Cards */}
                 
-                {/* Hero Metric - ×30 (TOP RIGHT) - REDUCED SIZE */}
-                <div className="absolute -top-4 -right-4 group/card animate-float">
-                  <div className="bg-gradient-to-br from-mint via-mint to-mint/90 rounded-xl p-3 transform group-hover/card:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 8px 20px rgba(49, 193, 158, 0.2), 0 3px 8px rgba(0,0,0,0.08)'
-                  }}>
-                    <div className="text-white text-center">
-                      <div className="flex items-center justify-center gap-2 mb-1">
-                        <TrendingUp className="w-3 h-3 drop-shadow-sm" />
-                        <span className="font-basic-sans text-xl font-bold drop-shadow-sm">×30</span>
+                {/* Mobile: Simplified overlay cards */}
+                <div className="block lg:hidden">
+                  {/* Top right - Main metric */}
+                  <div className="absolute -top-2 -right-2 animate-float">
+                    <div className="bg-mint rounded-lg p-2 shadow-lg">
+                      <div className="text-white text-center">
+                        <div className="font-basic-sans text-lg font-bold">×30</div>
+                        <div className="font-montserrat text-xs opacity-90">avis</div>
                       </div>
-                      <div className="font-montserrat text-xs font-medium opacity-90">plus d'avis</div>
                     </div>
                   </div>
-                </div>
-                
-                {/* Success Metric - 95% (TOP LEFT) - REDUCED SIZE */}
-                <div className="absolute -top-4 -left-4 animate-float" style={{ animationDelay: '0.5s' }}>
-                  <div className="bg-gradient-to-br from-periwinkle via-periwinkle to-periwinkle/90 rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 8px 20px rgba(229, 209, 254, 0.2), 0 3px 8px rgba(0,0,0,0.08)'
-                  }}>
-                    <div className="text-white text-center">
-                      <div className="flex items-center justify-center gap-2 mb-1">
-                        <CheckCircle className="w-3 h-3 drop-shadow-sm" />
-                        <span className="font-basic-sans text-xl font-bold drop-shadow-sm">95%</span>
+                  
+                  {/* Top left - Success metric */}
+                  <div className="absolute -top-2 -left-2 animate-float" style={{ animationDelay: '0.5s' }}>
+                    <div className="bg-periwinkle rounded-lg p-2 shadow-lg">
+                      <div className="text-white text-center">
+                        <div className="font-basic-sans text-lg font-bold">95%</div>
+                        <div className="font-montserrat text-xs opacity-90">+</div>
                       </div>
-                      <div className="font-montserrat text-xs font-medium opacity-90">positifs</div>
                     </div>
+                  </div>
+
+                  {/* Bottom right - Rating */}
+                  <div className="absolute -bottom-2 -right-2 animate-float" style={{ animationDelay: '1s' }}>
+                    <div className="bg-white/95 rounded-lg p-2 shadow-lg">
+                      <div className="text-night text-center">
+                        <div className="font-basic-sans text-sm font-bold">4.9★</div>
+                        <div className="font-montserrat text-xs opacity-70">note</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom - Company info (centered) */}
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 animate-float" style={{ animationDelay: '1.5s' }}>
+                    <div className="bg-white/95 rounded-lg p-2 shadow-lg">
+                      <div className="flex items-center gap-2">
+                        <div className="w-6 h-6 bg-gradient-to-r from-mint to-periwinkle rounded-md flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">TB</span>
+                        </div>
+                        <div className="text-night">
+                          <div className="font-basic-sans text-sm font-bold">The Bradery</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Duration - Mobile */}
+                  <div className="absolute top-2 left-2 bg-black/70 rounded-md px-2 py-1 opacity-80">
+                    <span className="text-white text-xs font-medium">2:15</span>
                   </div>
                 </div>
 
-                {/* Rating Card - 4.9/5 (BOTTOM RIGHT) - REDUCED SIZE */}
-                <div className="absolute -bottom-4 -right-4 animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 8px 20px rgba(0,0,0,0.06), 0 3px 8px rgba(0,0,0,0.04)'
-                  }}>
-                    <div className="text-night text-center">
-                      <div className="flex items-center justify-center gap-0.5 mb-1">
-                        <span className="text-base">⭐⭐⭐⭐⭐</span>
-                      </div>
-                      <div className="font-basic-sans text-lg font-bold">4.9/5</div>
-                      <div className="font-montserrat text-xs font-medium opacity-70">satisfaction</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Company Card - The Bradery (BOTTOM LEFT) - REDUCED SIZE */}
-                <div className="absolute -bottom-4 -left-4 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
-                    boxShadow: '0 8px 20px rgba(0,0,0,0.06), 0 3px 8px rgba(0,0,0,0.04)'
-                  }}>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-md">
-                        <span className="text-white text-sm font-bold">TB</span>
-                      </div>
-                      <div className="text-night">
-                        <div className="font-basic-sans text-sm font-bold">The Bradery</div>
-                        <div className="font-montserrat text-xs font-medium opacity-70">Fondateur</div>
+                {/* Desktop: Full overlay cards */}
+                <div className="hidden lg:block">
+                  {/* Hero Metric - ×30 (TOP RIGHT) */}
+                  <div className="absolute -top-4 -right-4 group/card animate-float">
+                    <div className="bg-gradient-to-br from-mint via-mint to-mint/90 rounded-xl p-3 transform group-hover/card:scale-105 transition-all duration-500" style={{
+                      boxShadow: '0 8px 20px rgba(49, 193, 158, 0.2), 0 3px 8px rgba(0,0,0,0.08)'
+                    }}>
+                      <div className="text-white text-center">
+                        <div className="flex items-center justify-center gap-2 mb-1">
+                          <TrendingUp className="w-3 h-3 drop-shadow-sm" />
+                          <span className="font-basic-sans text-xl font-bold drop-shadow-sm">×30</span>
+                        </div>
+                        <div className="font-montserrat text-xs font-medium opacity-90">plus d'avis</div>
                       </div>
                     </div>
                   </div>
-                </div>
+                  
+                  {/* Success Metric - 95% (TOP LEFT) */}
+                  <div className="absolute -top-4 -left-4 animate-float" style={{ animationDelay: '0.5s' }}>
+                    <div className="bg-gradient-to-br from-periwinkle via-periwinkle to-periwinkle/90 rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
+                      boxShadow: '0 8px 20px rgba(229, 209, 254, 0.2), 0 3px 8px rgba(0,0,0,0.08)'
+                    }}>
+                      <div className="text-white text-center">
+                        <div className="flex items-center justify-center gap-2 mb-1">
+                          <CheckCircle className="w-3 h-3 drop-shadow-sm" />
+                          <span className="font-basic-sans text-xl font-bold drop-shadow-sm">95%</span>
+                        </div>
+                        <div className="font-montserrat text-xs font-medium opacity-90">positifs</div>
+                      </div>
+                    </div>
+                  </div>
 
-                {/* Subtle duration indicator - SMALLER */}
-                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-sm rounded-lg px-2 py-1 opacity-80 hover:opacity-100 transition-opacity">
-                  <span className="text-white text-xs font-medium">2:15</span>
+                  {/* Rating Card - 4.9/5 (BOTTOM RIGHT) */}
+                  <div className="absolute -bottom-4 -right-4 animate-float" style={{ animationDelay: '1s' }}>
+                    <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
+                      boxShadow: '0 8px 20px rgba(0,0,0,0.06), 0 3px 8px rgba(0,0,0,0.04)'
+                    }}>
+                      <div className="text-night text-center">
+                        <div className="flex items-center justify-center gap-0.5 mb-1">
+                          <span className="text-base">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <div className="font-basic-sans text-lg font-bold">4.9/5</div>
+                        <div className="font-montserrat text-xs font-medium opacity-70">satisfaction</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Company Card - The Bradery (BOTTOM LEFT) */}
+                  <div className="absolute -bottom-4 -left-4 animate-float" style={{ animationDelay: '1.5s' }}>
+                    <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 hover:scale-105 transition-all duration-500" style={{
+                      boxShadow: '0 8px 20px rgba(0,0,0,0.06), 0 3px 8px rgba(0,0,0,0.04)'
+                    }}>
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-gradient-to-br from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-md">
+                          <span className="text-white text-sm font-bold">TB</span>
+                        </div>
+                        <div className="text-night">
+                          <div className="font-basic-sans text-sm font-bold">The Bradery</div>
+                          <div className="font-montserrat text-xs font-medium opacity-70">Fondateur</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Duration indicator - Desktop */}
+                  <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-sm rounded-lg px-2 py-1 opacity-80 hover:opacity-100 transition-opacity">
+                    <span className="text-white text-xs font-medium">2:15</span>
+                  </div>
                 </div>
               </div>
             </div>
