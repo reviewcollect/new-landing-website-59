@@ -46,8 +46,8 @@ const HeroSection = () => {
       }}></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center w-full">
-          <div className="lg:col-span-3 space-y-3 sm:space-y-6 animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
+          <div className="lg:col-span-1 space-y-3 sm:space-y-6 animate-fade-in">
             {/* Badge - Enhanced with video focus */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-mint/20 hover:scale-105 transition-all duration-300">
               <div className="w-2 h-2 bg-mint rounded-full animate-pulse"></div>
@@ -147,18 +147,18 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - LARGE Featured Video Testimonial */}
-          <div className="lg:col-span-2 relative animate-slide-up order-first lg:order-last">
+          {/* Right side - MASSIVE Featured Video Testimonial */}
+          <div className="lg:col-span-1 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
-              {/* Video showcase container - SIGNIFICANTLY ENLARGED */}
-              <div className="relative group">
+              {/* Video showcase container - MAXIMUM SIZE */}
+              <div className="relative group w-full">
                 {/* Enhanced glowing background effect - LARGER */}
-                <div className="absolute -inset-10 bg-gradient-to-r from-mint/25 via-periwinkle/25 to-mint/25 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-700 animate-pulse-slow"></div>
+                <div className="absolute -inset-12 bg-gradient-to-r from-mint/25 via-periwinkle/25 to-mint/25 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-700 animate-pulse-slow"></div>
                 
-                {/* MAIN VIDEO CONTAINER - SIGNIFICANTLY ENLARGED */}
-                <div className="relative w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[700px] xl:max-w-[750px] aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.03] transition-all duration-700 hover:shadow-4xl">
+                {/* MAIN VIDEO CONTAINER - HUGE AND PROMINENT */}
+                <div className="relative w-full min-w-[400px] max-w-none aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.02] transition-all duration-700 hover:shadow-4xl">
                   
-                  {/* YouTube iframe - MUCH LARGER */}
+                  {/* YouTube iframe - FULL CONTAINER WIDTH */}
                   <iframe
                     className="w-full h-full rounded-3xl"
                     src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=1&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
@@ -173,56 +173,56 @@ const HeroSection = () => {
                   ></iframe>
                 </div>
                 
-                {/* PROPERLY SEPARATED OVERLAY CARDS - NO OVERLAPPING - ADJUSTED FOR LARGER VIDEO */}
+                {/* PROPERLY SEPARATED OVERLAY CARDS - ADJUSTED FOR FULL-WIDTH VIDEO */}
                 
                 {/* TOP-RIGHT: ×30 plus d'avis */}
-                <div className="absolute -top-8 -right-8 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-white/40 animate-float z-20">
-                  <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-7 h-7 text-white" />
+                <div className="absolute -top-10 -right-10 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-white/40 animate-float z-20">
+                  <div className="flex items-center space-x-4">
+                    <TrendingUp className="w-8 h-8 text-white" />
                     <div className="text-white">
-                      <div className="font-basic-sans text-3xl font-bold">×30</div>
-                      <div className="font-montserrat text-sm opacity-90 font-medium">plus d'avis</div>
+                      <div className="font-basic-sans text-4xl font-bold">×30</div>
+                      <div className="font-montserrat text-base opacity-90 font-medium">plus d'avis</div>
                     </div>
                   </div>
                 </div>
                 
                 {/* TOP-LEFT: 95% positifs */}
-                <div className="absolute -top-8 -left-8 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-white/40 animate-float z-20" style={{ animationDelay: '1s' }}>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white text-sm font-bold">✓</span>
+                <div className="absolute -top-10 -left-10 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-white/40 animate-float z-20" style={{ animationDelay: '1s' }}>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white text-lg font-bold">✓</span>
                     </div>
                     <div className="text-white">
-                      <div className="font-basic-sans text-3xl font-bold">95%</div>
-                      <div className="font-montserrat text-sm opacity-90 font-medium">positifs</div>
+                      <div className="font-basic-sans text-4xl font-bold">95%</div>
+                      <div className="font-montserrat text-base opacity-90 font-medium">positifs</div>
                     </div>
                   </div>
                 </div>
 
                 {/* BOTTOM-RIGHT: 4.9/5 satisfaction */}
-                <div className="absolute -bottom-8 -right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-mint/30 animate-float z-20" style={{ animationDelay: '2s' }}>
-                  <div className="flex items-center space-x-3">
+                <div className="absolute -bottom-10 -right-10 bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-mint/30 animate-float z-20" style={{ animationDelay: '2s' }}>
+                  <div className="flex items-center space-x-4">
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-4 h-4 bg-yellow-400 rounded-full shadow-sm"></div>
+                        <div key={i} className="w-5 h-5 bg-yellow-400 rounded-full shadow-sm"></div>
                       ))}
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-2xl font-bold">4.9/5</div>
-                      <div className="font-montserrat text-sm opacity-70 font-medium">satisfaction</div>
+                      <div className="font-basic-sans text-3xl font-bold">4.9/5</div>
+                      <div className="font-montserrat text-base opacity-70 font-medium">satisfaction</div>
                     </div>
                   </div>
                 </div>
 
                 {/* BOTTOM-LEFT: Company testimonial context */}
-                <div className="absolute -bottom-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-periwinkle/30 animate-float z-20" style={{ animationDelay: '3s' }}>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-lg">
-                      <span className="text-white text-sm font-bold">TB</span>
+                <div className="absolute -bottom-10 -left-10 bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-periwinkle/30 animate-float z-20" style={{ animationDelay: '3s' }}>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-mint to-periwinkle rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-white text-lg font-bold">TB</span>
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-lg font-bold">The Bradery</div>
-                      <div className="font-montserrat text-sm opacity-70 font-medium">Témoignage</div>
+                      <div className="font-basic-sans text-xl font-bold">The Bradery</div>
+                      <div className="font-montserrat text-base opacity-70 font-medium">Témoignage</div>
                     </div>
                   </div>
                 </div>
