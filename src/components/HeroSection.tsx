@@ -138,36 +138,90 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Mobile interface showing review collection */}
+          {/* Right side - Video testimonial */}
           <div className="lg:col-span-5 relative animate-slide-up order-first lg:order-last">
             <div className="relative flex justify-center">
-              {/* Mobile phone mockup with review interface */}
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/51943c4a-2db3-4130-b643-9472b46e4b72.png" 
-                  alt="Interface mobile de collecte d'avis - Rive Droite Paris"
-                  className="w-48 sm:w-64 lg:w-80 h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-                />
+              {/* Video player container */}
+              <div className="relative group">
+                {/* Main video player */}
+                <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[400px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl bg-night/5 border border-white/20">
+                  <video
+                    className="w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjcxMSIgdmlld0JveD0iMCAwIDQwMCA3MTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNzExIiBmaWxsPSIjRjVFRkVBIi8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjM1NS41IiByPSI0MCIgZmlsbD0iIzMxQzE5RSIvPgo8cGF0aCBkPSJNMTg1IDE3MEwyMjUgMTkwTDE4NSAyMTBWMTcwWiIgZmlsbD0id2hpdGUiLz4KPHR4dCB4PSIyMDAiIHk9IjQyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzEwMTMxMyIgZm9udC1mYW1pbHk9Ik1vbnRzZXJyYXQiIGZvbnQtc2l6ZT0iMTYiPkNoYXJnZW1lbnQuLi48L3R4dD4KPHN2Zz4="
+                    onError={(e) => {
+                      console.warn('Video failed to load:', e);
+                      // Fallback: could show a static image or message
+                    }}
+                  >
+                    {/* MP4 source - main format */}
+                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.mp4" type="video/mp4" />
+                    
+                    {/* WebM source for better compression */}
+                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.webm" type="video/webm" />
+                    
+                    {/* Fallback content */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-isabelline rounded-2xl border border-mint/10">
+                      <div className="text-center p-6">
+                        <div className="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                          <PlayCircle className="w-8 h-8 text-white" />
+                        </div>
+                        <p className="font-montserrat text-sm text-night/70">Vidéo de démonstration</p>
+                        <p className="font-montserrat text-xs text-night/50 mt-1">Chargement...</p>
+                      </div>
+                    </div>
+                  </video>
+
+                  {/* Hover controls overlay */}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-2xl">
+                    <button 
+                      className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:scale-110 transition-transform"
+                      onClick={(e) => {
+                        const video = e.currentTarget.parentElement?.previousElementSibling as HTMLVideoElement;
+                        if (video) {
+                          if (video.paused) {
+                            video.play();
+                          } else {
+                            video.pause();
+                          }
+                        }
+                      }}
+                    >
+                      <PlayCircle className="w-6 h-6 text-night" />
+                    </button>
+                  </div>
+
+                  {/* Loading indicator */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+                      <span className="font-montserrat text-xs text-night/70">HD</span>
+                    </div>
+                  </div>
+                </div>
                 
-                {/* Floating elements around the phone */}
+                {/* Floating elements around the video */}
                 <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-mint/10 animate-float">
                   <div className="flex items-center space-x-1 sm:space-x-2">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="font-montserrat text-xs text-night/70">Client satisfait</span>
+                    <span className="font-montserrat text-xs text-night/70">Témoignage client</span>
                   </div>
                 </div>
                 
                 <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-periwinkle/10 animate-float" style={{ animationDelay: '1s' }}>
                   <div className="flex items-center space-x-1 sm:space-x-2">
                     <span className="text-mint text-xs sm:text-sm">⭐⭐⭐⭐⭐</span>
-                    <span className="font-montserrat text-xs text-night/70">Avis 5 étoiles</span>
+                    <span className="font-montserrat text-xs text-night/70">Avis vérifié</span>
                   </div>
                 </div>
 
                 <div className="absolute top-1/2 -left-4 sm:-left-6 bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-mint/10 animate-float" style={{ animationDelay: '2s' }}>
                   <div className="flex items-center space-x-1 sm:space-x-2">
-                    <MessageSquare className="w-3 h-3 sm:w-4 sm:h-4 text-mint" />
-                    <span className="font-montserrat text-xs text-night/70">SMS automatique</span>
+                    <PlayCircle className="w-3 h-3 sm:w-4 sm:h-4 text-mint" />
+                    <span className="font-montserrat text-xs text-night/70">Vidéo en direct</span>
                   </div>
                 </div>
               </div>
