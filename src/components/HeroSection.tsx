@@ -158,10 +158,10 @@ const HeroSection = () => {
                 {/* MAIN VIDEO CONTAINER - HUGE AND PROMINENT */}
                 <div className="relative w-full min-w-[400px] max-w-none aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.02] transition-all duration-700 hover:shadow-4xl">
                   
-                  {/* YouTube iframe - FULL CONTAINER WIDTH */}
+                  {/* YouTube iframe - FULL CONTAINER WIDTH WITH HIDDEN CONTROLS */}
                   <iframe
                     className="w-full h-full rounded-3xl"
-                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=1&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
+                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
                     title="Témoignage Tim - The Bradery - Comment multiplier ses avis clients par 30"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -170,37 +170,50 @@ const HeroSection = () => {
                     style={{ 
                       borderRadius: '1.5rem'
                     }}
+                    onMouseEnter={(e) => {
+                      const iframe = e.currentTarget;
+                      iframe.src = iframe.src.replace('controls=0', 'controls=1');
+                    }}
+                    onMouseLeave={(e) => {
+                      const iframe = e.currentTarget;
+                      iframe.src = iframe.src.replace('controls=1', 'controls=0');
+                    }}
                   ></iframe>
+
+                  {/* Subtle duration indicator - Top left corner */}
+                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-lg px-3 py-1 opacity-70 hover:opacity-90 transition-opacity z-30">
+                    <span className="font-montserrat text-xs font-medium text-white">2:15</span>
+                  </div>
                 </div>
                 
-                {/* PROPERLY SEPARATED OVERLAY CARDS - ADJUSTED FOR FULL-WIDTH VIDEO */}
+                {/* PERFECTLY SPACED OVERLAY CARDS - NO OVERLAPPING */}
                 
-                {/* TOP-RIGHT: ×30 plus d'avis */}
-                <div className="absolute -top-10 -right-10 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-white/40 animate-float z-20">
+                {/* TOP-RIGHT: ×30 plus d'avis - HERO METRIC (LARGER) */}
+                <div className="absolute -top-12 -right-12 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-xl p-7 shadow-lg border border-white/30 animate-float z-30">
                   <div className="flex items-center space-x-4">
-                    <TrendingUp className="w-8 h-8 text-white" />
+                    <TrendingUp className="w-9 h-9 text-white drop-shadow-sm" />
                     <div className="text-white">
-                      <div className="font-basic-sans text-4xl font-bold">×30</div>
-                      <div className="font-montserrat text-base opacity-90 font-medium">plus d'avis</div>
+                      <div className="font-basic-sans text-5xl font-bold drop-shadow-sm">×30</div>
+                      <div className="font-montserrat text-base opacity-95 font-semibold">plus d'avis</div>
                     </div>
                   </div>
                 </div>
                 
-                {/* TOP-LEFT: 95% positifs */}
-                <div className="absolute -top-10 -left-10 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-white/40 animate-float z-20" style={{ animationDelay: '1s' }}>
+                {/* TOP-LEFT: 95% positifs - ENHANCED CONTRAST */}
+                <div className="absolute -top-12 -left-12 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/30 animate-float z-30" style={{ animationDelay: '1s' }}>
                   <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white text-lg font-bold">✓</span>
+                    <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-white text-lg font-bold drop-shadow-sm">✓</span>
                     </div>
                     <div className="text-white">
-                      <div className="font-basic-sans text-4xl font-bold">95%</div>
-                      <div className="font-montserrat text-base opacity-90 font-medium">positifs</div>
+                      <div className="font-basic-sans text-4xl font-bold drop-shadow-sm">95%</div>
+                      <div className="font-montserrat text-base opacity-95 font-semibold">positifs</div>
                     </div>
                   </div>
                 </div>
 
-                {/* BOTTOM-RIGHT: 4.9/5 satisfaction */}
-                <div className="absolute -bottom-10 -right-10 bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-mint/30 animate-float z-20" style={{ animationDelay: '2s' }}>
+                {/* BOTTOM-RIGHT: 4.9/5 satisfaction - MOVED UP */}
+                <div className="absolute -bottom-16 -right-12 bg-white/96 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-mint/20 animate-float z-30" style={{ animationDelay: '2s' }}>
                   <div className="flex items-center space-x-4">
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
@@ -209,38 +222,51 @@ const HeroSection = () => {
                     </div>
                     <div className="text-night">
                       <div className="font-basic-sans text-3xl font-bold">4.9/5</div>
-                      <div className="font-montserrat text-base opacity-70 font-medium">satisfaction</div>
+                      <div className="font-montserrat text-base opacity-80 font-semibold">satisfaction</div>
                     </div>
                   </div>
                 </div>
 
-                {/* BOTTOM-LEFT: Company testimonial context */}
-                <div className="absolute -bottom-10 -left-10 bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-periwinkle/30 animate-float z-20" style={{ animationDelay: '3s' }}>
+                {/* BOTTOM-LEFT: Company testimonial context - MOVED FURTHER LEFT */}
+                <div className="absolute -bottom-12 -left-16 bg-white/96 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-periwinkle/20 animate-float z-30" style={{ animationDelay: '3s' }}>
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-mint to-periwinkle rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-mint to-periwinkle rounded-xl flex items-center justify-center shadow-md">
                       <span className="text-white text-lg font-bold">TB</span>
                     </div>
                     <div className="text-night">
                       <div className="font-basic-sans text-xl font-bold">The Bradery</div>
-                      <div className="font-montserrat text-base opacity-70 font-medium">Témoignage</div>
+                      <div className="font-montserrat text-sm opacity-70 font-medium">Fondateur & CEO</div>
+                      <div className="font-montserrat text-xs opacity-60 font-medium mt-1">Témoignage authentique</div>
                     </div>
                   </div>
                 </div>
 
-                {/* AUDIO/QUALITY INDICATOR - Inside video, top-right corner */}
-                <div className="absolute top-4 right-4 bg-black/90 backdrop-blur-sm rounded-xl px-4 py-2 shadow-xl border border-white/20 opacity-90 group-hover:opacity-100 transition-opacity z-30">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                    <span className="font-montserrat text-xs font-bold text-white">🔊 HD</span>
+                {/* Mobile-only overlay adjustments */}
+                <div className="absolute inset-0 lg:hidden">
+                  {/* Simplified mobile overlays */}
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
+                    <div className="text-white text-center">
+                      <div className="font-basic-sans text-2xl font-bold">×30</div>
+                      <div className="font-montserrat text-xs opacity-90">avis</div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
+                    <div className="text-night text-center">
+                      <div className="font-basic-sans text-lg font-bold">4.9★</div>
+                      <div className="font-montserrat text-xs opacity-70">satisfaction</div>
+                    </div>
                   </div>
                 </div>
 
-                {/* BOTTOM CENTER: Authenticity badge */}
-                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/20 to-periwinkle/20 backdrop-blur-sm rounded-full px-8 py-3 shadow-xl border border-white/40 z-20">
+                {/* AUDIO/QUALITY INDICATOR - Removed HD badge for cleaner look */}
+                
+                {/* BOTTOM CENTER: Minimalist authenticity badge */}
+                <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-8 py-3 shadow-md border border-white/30 z-20 opacity-80 hover:opacity-100 transition-opacity">
                   <div className="flex items-center space-x-3">
-                    <PlayCircle className="w-5 h-5 text-mint" />
-                    <span className="font-montserrat text-sm font-semibold text-night">
-                      Témoignage authentique • En direct
+                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                    <span className="font-montserrat text-sm font-medium text-night/80">
+                      En direct • Témoignage authentique
                     </span>
                   </div>
                 </div>
