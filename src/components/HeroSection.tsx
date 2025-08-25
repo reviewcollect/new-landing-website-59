@@ -152,13 +152,13 @@ const HeroSection = () => {
             <div className="relative flex justify-center">
               {/* Video showcase container - SIGNIFICANTLY ENLARGED */}
               <div className="relative group">
-                {/* Enhanced glowing background effect */}
-                <div className="absolute -inset-8 bg-gradient-to-r from-mint/25 via-periwinkle/25 to-mint/25 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-700 animate-pulse-slow"></div>
+                {/* Enhanced glowing background effect - LARGER */}
+                <div className="absolute -inset-10 bg-gradient-to-r from-mint/25 via-periwinkle/25 to-mint/25 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-700 animate-pulse-slow"></div>
                 
-                {/* MAIN VIDEO CONTAINER - MUCH LARGER AND PROMINENT */}
-                <div className="relative w-full max-w-[450px] sm:max-w-[500px] lg:max-w-[550px] aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.03] transition-all duration-700 hover:shadow-4xl">
+                {/* MAIN VIDEO CONTAINER - SIGNIFICANTLY ENLARGED */}
+                <div className="relative w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[700px] xl:max-w-[750px] aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.03] transition-all duration-700 hover:shadow-4xl">
                   
-                  {/* YouTube iframe - WITH SOUND ENABLED */}
+                  {/* YouTube iframe - MUCH LARGER */}
                   <iframe
                     className="w-full h-full rounded-3xl"
                     src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=1&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
@@ -173,56 +173,56 @@ const HeroSection = () => {
                   ></iframe>
                 </div>
                 
-                {/* PROPERLY SEPARATED OVERLAY CARDS - NO OVERLAPPING */}
+                {/* PROPERLY SEPARATED OVERLAY CARDS - NO OVERLAPPING - ADJUSTED FOR LARGER VIDEO */}
                 
                 {/* TOP-RIGHT: ×30 plus d'avis */}
-                <div className="absolute -top-6 -right-6 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/40 animate-float z-20">
+                <div className="absolute -top-8 -right-8 bg-gradient-to-r from-mint to-mint/90 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-white/40 animate-float z-20">
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-6 h-6 text-white" />
+                    <TrendingUp className="w-7 h-7 text-white" />
                     <div className="text-white">
-                      <div className="font-basic-sans text-2xl font-bold">×30</div>
-                      <div className="font-montserrat text-xs opacity-90 font-medium">plus d'avis</div>
+                      <div className="font-basic-sans text-3xl font-bold">×30</div>
+                      <div className="font-montserrat text-sm opacity-90 font-medium">plus d'avis</div>
                     </div>
                   </div>
                 </div>
                 
                 {/* TOP-LEFT: 95% positifs */}
-                <div className="absolute -top-6 -left-6 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-white/40 animate-float z-20" style={{ animationDelay: '1s' }}>
+                <div className="absolute -top-8 -left-8 bg-gradient-to-r from-periwinkle to-periwinkle/90 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-white/40 animate-float z-20" style={{ animationDelay: '1s' }}>
                   <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
                     <div className="text-white">
-                      <div className="font-basic-sans text-2xl font-bold">95%</div>
-                      <div className="font-montserrat text-xs opacity-90 font-medium">positifs</div>
+                      <div className="font-basic-sans text-3xl font-bold">95%</div>
+                      <div className="font-montserrat text-sm opacity-90 font-medium">positifs</div>
                     </div>
                   </div>
                 </div>
 
                 {/* BOTTOM-RIGHT: 4.9/5 satisfaction */}
-                <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-mint/30 animate-float z-20" style={{ animationDelay: '2s' }}>
+                <div className="absolute -bottom-8 -right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-mint/30 animate-float z-20" style={{ animationDelay: '2s' }}>
                   <div className="flex items-center space-x-3">
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full shadow-sm"></div>
+                        <div key={i} className="w-4 h-4 bg-yellow-400 rounded-full shadow-sm"></div>
                       ))}
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-xl font-bold">4.9/5</div>
-                      <div className="font-montserrat text-xs opacity-70 font-medium">satisfaction</div>
+                      <div className="font-basic-sans text-2xl font-bold">4.9/5</div>
+                      <div className="font-montserrat text-sm opacity-70 font-medium">satisfaction</div>
                     </div>
                   </div>
                 </div>
 
                 {/* BOTTOM-LEFT: Company testimonial context */}
-                <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-periwinkle/30 animate-float z-20" style={{ animationDelay: '3s' }}>
+                <div className="absolute -bottom-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-2xl border border-periwinkle/30 animate-float z-20" style={{ animationDelay: '3s' }}>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-lg">
-                      <span className="text-white text-xs font-bold">TB</span>
+                    <div className="w-10 h-10 bg-gradient-to-r from-mint to-periwinkle rounded-lg flex items-center justify-center shadow-lg">
+                      <span className="text-white text-sm font-bold">TB</span>
                     </div>
                     <div className="text-night">
-                      <div className="font-basic-sans text-sm font-bold">The Bradery</div>
-                      <div className="font-montserrat text-xs opacity-70 font-medium">Témoignage</div>
+                      <div className="font-basic-sans text-lg font-bold">The Bradery</div>
+                      <div className="font-montserrat text-sm opacity-70 font-medium">Témoignage</div>
                     </div>
                   </div>
                 </div>
