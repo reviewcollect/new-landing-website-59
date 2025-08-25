@@ -165,7 +165,7 @@ const HeroSection = () => {
                   {/* YouTube iframe */}
                   <iframe
                     className="w-full h-full rounded-3xl"
-                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=1&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0"
+                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0"
                     title="Témoignage Tim - The Bradery"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
