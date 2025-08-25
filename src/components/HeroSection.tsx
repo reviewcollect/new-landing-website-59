@@ -260,22 +260,6 @@ const HeroSection = () => {
                       borderRadius: '1.5rem'
                     }}
                   ></iframe>
-                  
-                  {/* PREMIUM SUBTITLE OVERLAY - Key Impact Quotes */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-b-3xl p-4 sm:p-6">
-                    <div className="text-center">
-                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-3 animate-fade-in" style={{ animationDelay: '2s' }}>
-                        <div className="w-2 h-2 bg-mint rounded-full"></div>
-                        <span className="text-white font-montserrat text-sm font-medium">Citation clé</span>
-                      </div>
-                      <blockquote className="text-white font-basic-sans text-lg sm:text-xl lg:text-2xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '2.5s' }}>
-                        "De 3,4 à 4,6 sur Trustpilot en 30 jours"
-                      </blockquote>
-                      <p className="text-white/80 font-montserrat text-sm mt-2 animate-fade-in" style={{ animationDelay: '3s' }}>
-                        ⚡ Résultats mesurés et vérifiables
-                      </p>
-                    </div>
-                  </div>
 
                   {/* PREMIUM CUSTOM PLAY BUTTON OVERLAY */}
                   {showPlayButton && (
