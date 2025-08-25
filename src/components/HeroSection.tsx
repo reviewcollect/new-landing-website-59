@@ -1,15 +1,17 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { PlayCircle, CheckCircle, MessageSquare, Smartphone, Mail, TrendingUp, ArrowRight } from 'lucide-react';
+import { PlayCircle, CheckCircle, MessageSquare, Smartphone, Mail, TrendingUp, ArrowRight, Users, Star, Eye, Zap, Radio } from 'lucide-react';
 
 const HeroSection = () => {
-  const [animatedNumbers, setAnimatedNumbers] = useState({ avis: 0, negatifs: 0 });
+  const [animatedNumbers, setAnimatedNumbers] = useState({ avis: 0, negatifs: 0, trustpilot: 3.4 });
+  const [viewCount] = useState(2847);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       let avisCount = 0;
       let negatifsCount = 0;
+      let trustpilotScore = 3.4;
       
       const interval = setInterval(() => {
         if (avisCount < 30) {
@@ -20,7 +22,11 @@ const HeroSection = () => {
           negatifsCount += 3;
           setAnimatedNumbers(prev => ({ ...prev, negatifs: Math.min(negatifsCount, 95) }));
         }
-        if (avisCount >= 30 && negatifsCount >= 95) {
+        if (trustpilotScore < 4.6) {
+          trustpilotScore += 0.04;
+          setAnimatedNumbers(prev => ({ ...prev, trustpilot: Math.min(trustpilotScore, 4.6) }));
+        }
+        if (avisCount >= 30 && negatifsCount >= 95 && trustpilotScore >= 4.6) {
           clearInterval(interval);
         }
       }, 50);
@@ -31,30 +37,36 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-isabelline via-white/95 to-mint/5 min-h-screen flex items-center pt-8 sm:pt-12 pb-4 sm:pb-6 overflow-hidden">
-      {/* Premium Background Pattern */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-mint/20 to-periwinkle/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-periwinkle/20 to-mint/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-mint/10 via-transparent to-transparent rounded-full blur-2xl"></div>
+      {/* Ultra Premium Background Pattern */}
+      <div className="absolute inset-0 opacity-50">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-mint/30 to-periwinkle/30 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-periwinkle/30 to-mint/30 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-mint/20 via-transparent to-transparent rounded-full blur-2xl"></div>
+        {/* Additional premium layers */}
+        <div className="absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-periwinkle/15 to-mint/15 rounded-full blur-2xl animate-float"></div>
       </div>
 
-      {/* Premium Geometric Overlay */}
-      <div className="absolute inset-0 opacity-5" style={{
+      {/* Enhanced Geometric Overlay */}    
+      <div className="absolute inset-0 opacity-8" style={{
         backgroundImage: `
-          radial-gradient(circle at 25% 25%, rgba(49, 193, 158, 0.3) 1px, transparent 1px),
-          radial-gradient(circle at 75% 75%, rgba(229, 209, 254, 0.3) 1px, transparent 1px)
+          radial-gradient(circle at 20% 30%, rgba(49, 193, 158, 0.4) 1px, transparent 1px),
+          radial-gradient(circle at 80% 70%, rgba(229, 209, 254, 0.4) 1px, transparent 1px),
+          linear-gradient(45deg, transparent 40%, rgba(49, 193, 158, 0.03) 50%, transparent 60%)
         `,
-        backgroundSize: '60px 60px, 80px 80px'
+        backgroundSize: '60px 60px, 80px 80px, 120px 120px'
       }}></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full max-h-screen">
           <div className="lg:col-span-1 space-y-3 sm:space-y-4 animate-fade-in">
-            {/* Badge - Enhanced with video focus */}
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/10 to-periwinkle/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 shadow-lg border border-mint/20 hover:scale-105 transition-all duration-300">
-              <div className="w-1.5 h-1.5 bg-mint rounded-full animate-pulse"></div>
-              <span className="font-montserrat text-xs sm:text-sm font-semibold text-night">
-                ✨ Témoignage client en direct
+            {/* Premium Badge - PODCAST EXCLUSIF */}
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 shadow-lg border border-mint/30 hover:scale-105 transition-all duration-300 animate-glow">
+              <div className="flex items-center gap-1.5">
+                <Radio className="w-3 h-3 text-red-500 animate-pulse" />
+                <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
+              </div>
+              <span className="font-montserrat text-xs sm:text-sm font-bold text-night">
+                🎙️ Podcast exclusif - LIVE
               </span>
             </div>
 
@@ -66,86 +78,103 @@ const HeroSection = () => {
                   <span className="bg-gradient-to-r from-mint via-mint to-periwinkle bg-clip-text text-transparent drop-shadow-sm">
                     multiplié ses avis
                   </span>
-                  <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1 sm:h-1.5 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
+                  <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1 sm:h-1.5 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg animate-glow"></div>
                 </span>
                 {' '}par 30
               </h1>
               
               <p className="font-montserrat text-sm sm:text-base lg:text-lg text-night/85 leading-relaxed max-w-2xl font-medium">
-                De 0 à 95% d'avis positifs en 30 jours avec notre solution e-réputation
+                <span className="font-bold text-mint">De 3,4 à 4,6 sur Trustpilot</span> en 30 jours avec notre solution e-réputation
               </p>
             </div>
 
-            {/* Metrics - COMPACT VERSION */}
-            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-sm border border-mint/10 hover:shadow-lg transition-all group">
-                <div className="flex items-center space-x-2 mb-1">
-                  <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
-                  <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">
+            {/* Enhanced Metrics - 4 CARDS */}
+            <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in">
+                <div className="flex items-center space-x-1.5 mb-1">
+                  <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-mint group-hover:scale-110 transition-transform" />
+                  <span className="font-basic-sans text-lg sm:text-xl font-bold text-mint">
                     ×{animatedNumbers.avis}
                   </span>
                 </div>
                 <p className="font-montserrat text-xs text-night/70">plus d'avis</p>
               </div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-sm border border-periwinkle/10 hover:shadow-lg transition-all group">
-                <div className="flex items-center space-x-2 mb-1">
-                  <div className="w-4 h-4 sm:w-5 sm:h-5 bg-periwinkle rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-white text-xs font-bold">−</span>
-                  </div>
-                  <span className="font-basic-sans text-xl sm:text-2xl font-bold text-periwinkle">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-periwinkle/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <div className="flex items-center space-x-1.5 mb-1">
+                  <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-periwinkle group-hover:scale-110 transition-transform" />
+                  <span className="font-basic-sans text-lg sm:text-xl font-bold text-periwinkle">
                     {animatedNumbers.negatifs}%
                   </span>
                 </div>
-                <p className="font-montserrat text-xs text-night/70">d'avis négatifs</p>
+                <p className="font-montserrat text-xs text-night/70">positifs</p>
               </div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-sm border border-mint/10 hover:shadow-lg transition-all group">
-                <div className="flex items-center space-x-2 mb-1">
-                  <div className="flex space-x-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-yellow-400 rounded-full group-hover:scale-110 transition-transform" style={{ animationDelay: `${i * 100}ms` }}></div>
-                    ))}
-                  </div>
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-yellow-200 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-center space-x-1.5 mb-1">
+                  <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 group-hover:scale-110 transition-transform" />
+                  <span className="font-basic-sans text-lg sm:text-xl font-bold text-orange-600">
+                    {animatedNumbers.trustpilot.toFixed(1)}
+                  </span>
                 </div>
-                <p className="font-montserrat text-xs text-night/70">Note moyenne 4,9/5</p>
+                <p className="font-montserrat text-xs text-night/70">Trustpilot</p>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <div className="flex items-center space-x-1.5 mb-1">
+                  <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-mint group-hover:scale-110 transition-transform" />
+                  <span className="font-basic-sans text-lg sm:text-xl font-bold text-mint">30j</span>
+                </div>
+                <p className="font-montserrat text-xs text-night/70">résultats</p>
               </div>
             </div>
 
-            {/* Features list - COMPACT */}
+            {/* Premium Features list */}
             <div className="space-y-1.5 sm:space-y-2">
-              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300">
-                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-sm">
+              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300" style={{ animationDelay: '0.1s' }}>
+                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-md animate-fade-in">
                   <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <span className="font-montserrat text-xs sm:text-sm text-night/80">Multi-canal (WhatsApp, SMS, Email)</span>
+                <span className="font-montserrat text-xs sm:text-sm text-night/80 font-medium">Multi-canal (WhatsApp, SMS, Email)</span>
               </div>
-              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300">
-                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-sm">
+              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300" style={{ animationDelay: '0.2s' }}>
+                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-md animate-fade-in">
                   <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <span className="font-montserrat text-xs sm:text-sm text-night/80">Routage intelligent des avis</span>
+                <span className="font-montserrat text-xs sm:text-sm text-night/80 font-medium">Routage intelligent des avis</span>
               </div>
-              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300">
-                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-sm">
+              <div className="flex items-center space-x-2 sm:space-x-3 group hover:translate-x-1 transition-transform duration-300" style={{ animationDelay: '0.3s' }}>
+                <div className="bg-mint rounded-full p-1 sm:p-1.5 group-hover:scale-110 transition-transform shadow-md animate-fade-in">
                   <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <span className="font-montserrat text-xs sm:text-sm text-night/80">Compatible Shopify, Gorgias, Klaviyo</span>
+                <span className="font-montserrat text-xs sm:text-sm text-night/80 font-medium">Compatible Shopify, Gorgias, Klaviyo</span>
               </div>
             </div>
 
-            {/* CTA buttons - COMPACT */}
+            {/* Premium CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <Button className="bg-gradient-to-r from-mint to-mint/90 hover:from-mint/90 hover:to-mint text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold rounded-xl transition-all hover:scale-105 hover:shadow-xl group shadow-lg border-2 border-mint/20">
+              <Button className="btn-premium bg-gradient-to-r from-mint to-mint/90 hover:from-mint/90 hover:to-mint text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold rounded-xl transition-all hover:scale-105 hover:shadow-2xl group shadow-xl border-2 border-mint/20 animate-fade-in">
                 <span className="flex items-center space-x-2">
                   <span>Obtenir les mêmes résultats</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
-              <Button variant="outline" className="border-2 border-mint/30 text-night hover:bg-mint hover:text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold flex items-center gap-2 rounded-xl transition-all hover:scale-105 group bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl">
+              <Button variant="outline" className="border-2 border-mint/40 text-night hover:bg-mint hover:text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold flex items-center gap-2 rounded-xl transition-all hover:scale-105 group bg-white/95 backdrop-blur-sm shadow-xl hover:shadow-2xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <PlayCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                Voir comment ça marche
+                Voir l'interview complète
               </Button>
+            </div>
+
+            {/* Social Proof Strip */}
+            <div className="flex items-center gap-4 pt-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-center gap-2">
+                <Eye className="w-4 h-4 text-night/60" />
+                <span className="font-montserrat text-xs text-night/70">Vue par <span className="font-bold text-mint">{viewCount.toLocaleString()}</span> entrepreneurs</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-night/60" />
+                <span className="font-montserrat text-xs text-night/70">Recommandé par <span className="font-bold text-mint">500+</span> e-commerces</span>
+              </div>
             </div>
           </div>
 
@@ -182,6 +211,29 @@ const HeroSection = () => {
                       borderRadius: '1.5rem'
                     }}
                   ></iframe>
+                  
+                  {/* PREMIUM SUBTITLE OVERLAY - Key Impact Quotes */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-b-3xl p-4 sm:p-6">
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-3 animate-fade-in" style={{ animationDelay: '2s' }}>
+                        <div className="w-2 h-2 bg-mint rounded-full animate-pulse"></div>
+                        <span className="text-white font-montserrat text-sm font-medium">Citation clé</span>
+                      </div>
+                      <blockquote className="text-white font-basic-sans text-lg sm:text-xl lg:text-2xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '2.5s' }}>
+                        "De 3,4 à 4,6 sur Trustpilot en 30 jours"
+                      </blockquote>
+                      <p className="text-white/80 font-montserrat text-sm mt-2 animate-fade-in" style={{ animationDelay: '3s' }}>
+                        ⚡ Résultats mesurés et vérifiables
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* PREMIUM CUSTOM PLAY BUTTON OVERLAY */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black/20 rounded-3xl">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/30 hover:scale-110 transition-transform duration-300 animate-pulse">
+                      <PlayCircle className="w-12 h-12 text-white drop-shadow-lg" />
+                    </div>
+                  </div>
                 </div>
                 
                 {/* OPTIMIZED Overlay Cards - MOBILE PERFECTED */}
