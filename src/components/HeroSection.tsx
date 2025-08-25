@@ -158,37 +158,19 @@ const HeroSection = () => {
                 {/* MAIN VIDEO CONTAINER - MUCH LARGER AND PROMINENT */}
                 <div className="relative w-full max-w-[450px] sm:max-w-[500px] lg:max-w-[550px] aspect-[16/9] rounded-3xl overflow-hidden shadow-3xl bg-gradient-to-br from-white to-isabelline border-2 border-white/60 group-hover:scale-[1.03] transition-all duration-700 hover:shadow-4xl">
                   
-                  {/* Video player - LARGE AND PROMINENT */}
-                  <video
-                    className="w-full h-full object-cover rounded-3xl brightness-110 contrast-105"
-                    autoPlay
-                    loop
-                    playsInline
-                    controls
-                    preload="auto"
-                    style={{ borderRadius: '1.5rem' }}
-                    onError={(e) => {
-                      console.warn('Video failed to load, trying fallback:', e);
+                  {/* YouTube iframe - WITH SOUND ENABLED */}
+                  <iframe
+                    className="w-full h-full rounded-3xl"
+                    src="https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=0&loop=1&playlist=n44Z4HDah7o&controls=1&modestbranding=1&rel=0&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&hd=1&vq=hd1080&quality=hd1080"
+                    title="Témoignage Tim - The Bradery - Comment multiplier ses avis clients par 30"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="eager"
+                    style={{ 
+                      borderRadius: '1.5rem'
                     }}
-                  >
-                    {/* Primary source - Tella.tv direct link */}
-                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c" type="video/mp4" />
-                    
-                    {/* Fallback sources */}
-                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.mp4" type="video/mp4" />
-                    <source src="https://www.tella.tv/video/temoignage-review-collect-tim-the-bradery-copy-copy-es2c.webm" type="video/webm" />
-                    
-                    {/* Fallback content if video doesn't load */}
-                    <div className="w-full h-full bg-gradient-to-br from-isabelline via-white to-mint/10 flex items-center justify-center rounded-3xl border-2 border-mint/20">
-                      <div className="text-center p-8">
-                        <div className="w-24 h-24 bg-gradient-to-r from-mint to-periwinkle rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse shadow-xl">
-                          <PlayCircle className="w-12 h-12 text-white" />
-                        </div>
-                        <h3 className="font-basic-sans text-xl font-bold text-night mb-3">Témoignage Tim - The Bradery</h3>
-                        <p className="font-montserrat text-base text-night/60">Chargement de la vidéo testimoniale...</p>
-                      </div>
-                    </div>
-                  </video>
+                  ></iframe>
                 </div>
                 
                 {/* PROPERLY SEPARATED OVERLAY CARDS - NO OVERLAPPING */}
