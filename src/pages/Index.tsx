@@ -15,6 +15,7 @@ import IntegrationsSection from '@/components/IntegrationsSection';
 import UpcomingFeaturesSection from '@/components/UpcomingFeaturesSection';
 import PricingSection from '@/components/PricingSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import FeaturesSection from '@/components/FeaturesSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
 import StickyCTA from '@/components/StickyCtA';
@@ -24,6 +25,7 @@ const Index = () => {
     <div className="min-h-screen bg-isabelline">
       <Navigation />
       <HeroSection />
+      <FeaturesSection />
       <ProblemSection />
       <SocialProofSection />
       <ResultsSection />
