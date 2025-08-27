@@ -86,7 +86,7 @@ const HeroSection = () => {
             {/* Titre principal */}
             <div className="space-y-3">
               <h1 className="font-basic-sans text-3xl sm:text-4xl lg:text-5xl font-black text-night leading-tight">
-                Découvrez comment The Bradery a <span className="bg-gradient-to-r from-mint to-cyan-400 bg-clip-text text-transparent font-black">multiplié ses avis</span> par 30
+                Découvrez comment The Bradery a <span className="bg-gradient-to-r from-teal-400 to-blue-300 bg-clip-text text-transparent font-black">multiplié ses avis</span> par 30
               </h1>
               
               <h2 className="font-montserrat text-base sm:text-lg text-night/70 leading-relaxed font-medium">
