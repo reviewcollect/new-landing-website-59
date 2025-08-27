@@ -169,9 +169,11 @@ const HeroSection = () => {
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                   <div className="flex items-center space-x-2 mb-1.5">
                     <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
-                    <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">30j</span>
+                    <span className="font-basic-sans text-lg sm:text-xl font-bold text-mint">
+                      30j
+                    </span>
                   </div>
-                  <p className="font-montserrat text-sm text-night/70">résultats</p>
+                  <p className="font-montserrat text-sm text-night/70">Résultat garantis en 30 Jour</p>
                 </div>
               </div>
 
