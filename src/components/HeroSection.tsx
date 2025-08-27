@@ -86,11 +86,11 @@ const HeroSection = () => {
             {/* Titre principal */}
             <div className="space-y-3">
               <h1 className="font-basic-sans text-3xl sm:text-4xl lg:text-5xl font-black text-night leading-tight">
-                Découvrez comment The Bradery a <span className="text-mint">multiplié ses avis</span> par 30
+                Découvrez comment The Bradery a <span className="text-mint font-black">multiplié ses avis</span> par 30
               </h1>
               
               <h2 className="font-montserrat text-base sm:text-lg text-night/70 leading-relaxed font-medium">
-                De 3,4 à 4,6 sur Trustpilot en 30 jours avec notre solution e-réputation
+                De <span className="text-mint font-semibold">3,4 à 4,6</span> sur Trustpilot en 30 jours avec notre solution e-réputation
               </h2>
             </div>
 
@@ -119,9 +119,9 @@ const HeroSection = () => {
               <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 flex-1">
                 <div className="flex items-center space-x-2 mb-1">
                   <CheckCircle className="w-5 h-5 text-mint group-hover:scale-110 transition-transform" />
-                  <span className="font-basic-sans text-2xl font-bold text-mint">30j</span>
+                  <span className="font-basic-sans text-2xl font-bold text-mint">15min</span>
                 </div>
-                <p className="font-montserrat text-xs text-night/70">de résultats</p>
+                <p className="font-montserrat text-xs text-night/70">d'installation</p>
               </div>
             </div>
 
@@ -135,7 +135,25 @@ const HeroSection = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-night/60" />
-                  <span className="font-montserrat text-sm text-night/70">Approuvé par <span className="font-bold text-mint">Bradery</span> et <span className="font-bold text-mint">500+</span> e-commerces</span>
+                  <span className="font-montserrat text-sm text-night/70">Approuvé par <span className="font-bold text-mint">500+</span> e-commerces</span>
+                </div>
+              </div>
+
+              {/* Indicateur avec nouvelles métriques */}
+              <div className="bg-gradient-to-r from-mint/5 to-periwinkle/5 rounded-xl p-4 border border-mint/10">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-mint">🎯 7.5M</span>
+                    <span className="text-xs text-night/70 font-medium">d'avis collectés pour nos clients</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-mint">👥 2847</span>
+                    <span className="text-xs text-night/70 font-medium">entrepreneurs nous font confiance</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-mint">⭐ 500+</span>
+                    <span className="text-xs text-night/70 font-medium">e-commerces transformées</span>
+                  </div>
                 </div>
               </div>
 
@@ -168,7 +186,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <Button className="bg-mint hover:bg-mint/90 text-white px-8 py-4 text-base font-bold rounded-xl transition-all hover:scale-105 hover:shadow-xl group shadow-lg">
                 <span className="flex items-center space-x-2">
-                  <span>Accéder à la méthode</span>
+                  <span>Obtenir les mêmes résultats</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
@@ -187,12 +205,12 @@ const HeroSection = () => {
           {/* Colonne droite - Vidéo avec logo Bradery */}
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
-              <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 shadow-xl">
+              <div className="relative w-full aspect-[16/9] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 shadow-2xl">
                 
                 {/* Logo Bradery overlay */}
-                <div className="absolute top-3 left-3 z-20">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 shadow-lg">
-                    <span className="font-basic-sans text-xs font-bold text-night">THE BRADERY</span>
+                <div className="absolute top-4 left-4 z-20">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-white/30">
+                    <span className="font-basic-sans text-sm font-black text-night">THE BRADERY</span>
                   </div>
                 </div>
                 
@@ -209,17 +227,17 @@ const HeroSection = () => {
                 {/* Custom play button overlay */}
                 {showPlayButton && (
                   <div 
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-2xl cursor-pointer z-10 hover:bg-black/30 transition-all"
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-2xl cursor-pointer z-10 hover:bg-black/40 transition-all"
                     onClick={handlePlayVideo}
                   >
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 border border-white/30 hover:scale-110 transition-transform duration-300 shadow-xl">
-                      <PlayCircle className="w-12 h-12 text-mint" />
+                    <div className="bg-white/95 backdrop-blur-sm rounded-full p-6 border border-white/50 hover:scale-110 transition-transform duration-300 shadow-2xl">
+                      <PlayCircle className="w-16 h-16 text-mint" />
                     </div>
                   </div>
                 )}
               </div>
               
-              <p className="font-montserrat text-night/70 mt-2 text-center text-sm">
+              <p className="font-montserrat text-night/70 mt-3 text-center text-sm font-medium">
                 Découvrez comment The Bradery a transformé sa réputation
               </p>
             </div>
