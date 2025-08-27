@@ -86,7 +86,7 @@ const HeroSection = () => {
             {/* Titre principal */}
             <div className="space-y-3">
               <h1 className="font-basic-sans text-3xl sm:text-4xl lg:text-5xl font-black text-night leading-tight">
-                Découvrez comment The Bradery a <span className="bg-gradient-to-r from-mint to-periwinkle bg-clip-text text-transparent font-black underline decoration-mint decoration-4">multiplié ses avis</span> par 30
+                Découvrez comment The Bradery a <span className="relative bg-gradient-to-r from-mint to-periwinkle bg-clip-text text-transparent font-black after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-mint after:to-periwinkle after:rounded">multiplié ses avis</span> par 30
               </h1>
               
               <h2 className="font-montserrat text-base sm:text-lg text-night/70 leading-relaxed font-medium">
