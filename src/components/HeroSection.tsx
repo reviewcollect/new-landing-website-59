@@ -119,9 +119,7 @@ const HeroSection = () => {
               {/* Main title - ENHANCED TYPOGRAPHY */}
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="font-basic-sans text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-night leading-[1.1] tracking-normal">
-                  Découvrez comment
-                  <br />
-                  The Bradery a
+                  Découvrez comment The Bradery a
                   <br />
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-mint via-mint to-periwinkle bg-clip-text text-transparent drop-shadow-sm">
@@ -129,7 +127,8 @@ const HeroSection = () => {
                     </span>
                     <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1.5 sm:h-2 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
                   </span>
-                  {' '}par 30
+                  <br />
+                  par 30
                 </h1>
                 
                 <p className="font-montserrat text-base sm:text-lg lg:text-xl text-night/85 leading-relaxed max-w-2xl font-medium">
