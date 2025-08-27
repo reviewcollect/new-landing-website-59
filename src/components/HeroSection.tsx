@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   const handlePlayVideo = () => {
     console.log('Bouton play cliqué, isMobile:', isMobile);
-    const iframe = document.querySelector('iframe[title="Témoignage Tim - The Bradery"]') as HTMLIFrameElement;
+    const iframe = document.querySelector('iframe[title="Témoignage The Bradery"]') as HTMLIFrameElement;
     if (iframe) {
       console.log('iframe trouvé');
       const currentSrc = iframe.src;
@@ -112,14 +112,14 @@ const HeroSection = () => {
                   <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                 </div>
                 <span className="font-montserrat text-sm sm:text-base font-bold text-night">
-                  🎙️ Podcast exclusif
+                  🎙️ Témoignage Client The Bradery
                 </span>
               </div>
 
               {/* Main title - ENHANCED TYPOGRAPHY */}
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="font-basic-sans text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-night leading-[0.95] tracking-tight">
-                  Découvrez comment Tim a{' '}
+                  Découvrez comment The Bradery a{' '}
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-mint via-mint to-periwinkle bg-clip-text text-transparent drop-shadow-sm">
                       multiplié ses avis
@@ -178,10 +178,6 @@ const HeroSection = () => {
               {/* Social Proof Strip */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 pt-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div className="flex items-center gap-2">
-                  <Eye className="w-5 h-5 text-night/60" />
-                  <span className="font-montserrat text-sm text-night/70">Vue par <span className="font-bold text-mint">{viewCount.toLocaleString()}</span> entrepreneurs</span>
-                </div>
-                <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 text-night/60" />
                   <span className="font-montserrat text-sm text-night/70">Recommandé par <span className="font-bold text-mint">500+</span> e-commerces</span>
                 </div>
@@ -205,7 +201,7 @@ const HeroSection = () => {
                     <iframe
                       className="w-full h-full rounded-3xl"
                       src={`https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=${isMobile ? '1' : '0'}&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0`}
-                      title="Témoignage Tim - The Bradery"
+                      title="Témoignage The Bradery"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
