@@ -86,11 +86,11 @@ const HeroSection = () => {
             {/* Titre principal */}
             <div className="space-y-3">
               <h1 className="font-basic-sans text-3xl sm:text-4xl lg:text-5xl font-black text-night leading-tight">
-                <span className="text-mint">Multipliez vos avis</span> clients par 30
+                Découvrez comment The Bradery a <span className="text-mint">multiplié ses avis</span> par 30
               </h1>
               
               <h2 className="font-montserrat text-base sm:text-lg text-night/70 leading-relaxed font-medium">
-                Découvrez la méthode exacte utilisée par Tim (CEO Bradery) pour transformer sa réputation en ligne
+                De 3,4 à 4,6 sur Trustpilot en 30 jours avec notre solution e-réputation
               </h2>
             </div>
 
@@ -220,7 +220,7 @@ const HeroSection = () => {
               </div>
               
               <p className="font-montserrat text-night/70 mt-2 text-center text-sm">
-                Découvrez comment Tim a transformé sa réputation
+                Découvrez comment The Bradery a transformé sa réputation
               </p>
             </div>
           </div>
