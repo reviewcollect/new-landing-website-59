@@ -173,7 +173,7 @@ const HeroSection = () => {
                       30j
                     </span>
                   </div>
-                  <p className="font-montserrat text-sm text-night/70">Résultat garantis en 30 Jour</p>
+                  <p className="font-montserrat text-sm text-night/70">Résultat garantis</p>
                 </div>
               </div>
 
