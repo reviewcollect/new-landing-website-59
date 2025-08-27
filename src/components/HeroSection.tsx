@@ -66,6 +66,11 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-white h-screen flex items-center pt-16 pb-8 overflow-hidden">
+      {/* Background subtle pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-mint/20 to-periwinkle/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-periwinkle/20 to-mint/20 rounded-full blur-3xl"></div>
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="grid lg:grid-cols-2 gap-8 items-center h-full max-w-7xl mx-auto">
@@ -81,7 +86,7 @@ const HeroSection = () => {
             {/* Titre principal */}
             <div className="space-y-3">
               <h1 className="font-basic-sans text-3xl sm:text-4xl lg:text-5xl font-black text-night leading-tight">
-                Découvrez comment The Bradery a <span className="text-mint font-black">multiplié ses avis</span> par 30
+                Découvrez comment The Bradery a <span className="bg-gradient-to-r from-mint via-periwinkle to-purple-500 bg-clip-text text-transparent font-black">multiplié ses avis</span> par 30
               </h1>
               
               <h2 className="font-montserrat text-base sm:text-lg text-night/70 leading-relaxed font-medium">
@@ -134,23 +139,6 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Indicateur avec nouvelles métriques */}
-              <div className="bg-gradient-to-r from-mint/5 to-periwinkle/5 rounded-xl p-4 border border-mint/10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-mint">🎯 7.5M</span>
-                    <span className="text-xs text-night/70 font-medium">d'avis collectés pour nos clients</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-mint">👥 2847</span>
-                    <span className="text-xs text-night/70 font-medium">entrepreneurs nous font confiance</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-mint">⭐ 500+</span>
-                    <span className="text-xs text-night/70 font-medium">e-commerces transformées</span>
-                  </div>
-                </div>
-              </div>
 
               {/* Section crédibilité - 3 points compacts */}
               <div className="grid grid-cols-1 gap-2">
@@ -202,12 +190,6 @@ const HeroSection = () => {
             <div className="relative">
               <div className="relative w-full aspect-[16/9] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 shadow-2xl">
                 
-                {/* Logo Bradery overlay */}
-                <div className="absolute top-4 left-4 z-20">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-white/30">
-                    <span className="font-basic-sans text-sm font-black text-night">THE BRADERY</span>
-                  </div>
-                </div>
                 
                 {/* YouTube iframe */}
                 <iframe
