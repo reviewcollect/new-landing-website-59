@@ -138,12 +138,12 @@ const HeroSection = () => {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in">
                   <div className="flex items-center space-x-2 mb-1.5">
-                    <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
                     <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">
-                      ×{animatedNumbers.avis}
+                      15min
                     </span>
                   </div>
-                  <p className="font-montserrat text-sm text-night/70">plus d'avis</p>
+                  <p className="font-montserrat text-sm text-night/70">d'installation</p>
                 </div>
                 
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-periwinkle/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.1s' }}>
