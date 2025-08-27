@@ -181,6 +181,10 @@ const HeroSection = () => {
                   <Users className="w-5 h-5 text-night/60" />
                   <span className="font-montserrat text-sm text-night/70">Recommandé par <span className="font-bold text-mint">500+</span> e-commerces</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-night/60" />
+                  <span className="font-montserrat text-sm text-night/70"><span className="font-bold text-mint">Satisfait ou remboursé</span></span>
+                </div>
               </div>
             </div>
 
