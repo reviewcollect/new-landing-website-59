@@ -66,11 +66,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-white h-screen flex items-center pt-16 pb-8 overflow-hidden">
-      {/* Background subtle pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-mint/20 to-periwinkle/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-periwinkle/20 to-mint/20 rounded-full blur-3xl"></div>
-      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="grid lg:grid-cols-2 gap-8 items-center h-full max-w-7xl mx-auto">
