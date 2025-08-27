@@ -134,8 +134,8 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              {/* Enhanced Metrics - 4 CARDS */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              {/* Enhanced Metrics - 3 CARDS */}
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in">
                   <div className="flex items-center space-x-2 mb-1.5">
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
@@ -154,16 +154,6 @@ const HeroSection = () => {
                     </span>
                   </div>
                   <p className="font-montserrat text-sm text-night/70">positifs</p>
-                </div>
-                
-                <div className="bg-gradient-to-br from-mint/10 to-mint/5 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                  <div className="flex items-center space-x-2 mb-1.5">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
-                    <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">
-                      {animatedNumbers.trustpilot.toFixed(1)}
-                    </span>
-                  </div>
-                  <p className="font-montserrat text-sm text-night/70">Trustpilot</p>
                 </div>
 
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.3s' }}>
