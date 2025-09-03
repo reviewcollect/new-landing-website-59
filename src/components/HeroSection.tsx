@@ -100,102 +100,102 @@ const HeroSection = () => {
         backgroundSize: '60px 60px, 80px 80px, 120px 120px'
       }}></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center justify-center">
-        <div className="w-full max-w-7xl mx-auto space-y-8 lg:space-y-12">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center justify-center">
+        <div className="w-full max-w-7xl mx-auto space-y-6 sm:space-y-8 lg:space-y-12">
           {/* Content Section */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-start lg:items-center w-full">
             <div className="lg:col-span-1 space-y-4 sm:space-y-6 animate-fade-in">
               {/* Premium Badge - PODCAST EXCLUSIF */}
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-4 sm:px-5 py-2 sm:py-2.5 shadow-lg border border-mint/30 hover:scale-105 transition-all duration-300">
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-mint/15 to-periwinkle/15 backdrop-blur-sm rounded-full px-3 sm:px-5 py-2 sm:py-2.5 shadow-lg border border-mint/30 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center gap-1.5">
-                  <Radio className="w-4 h-4 text-red-500" />
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <Radio className="w-3 sm:w-4 h-3 sm:h-4 text-red-500" />
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-red-500 rounded-full"></div>
                 </div>
-                <span className="font-montserrat text-sm sm:text-base font-bold text-night">
+                <span className="font-montserrat text-xs sm:text-base font-bold text-night">
                   🎙️ Témoignage Client The Bradery
                 </span>
               </div>
 
               {/* Main title - ENHANCED TYPOGRAPHY */}
               <div className="space-y-3 sm:space-y-4">
-                <h1 className="font-basic-sans text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-night leading-[1.1] tracking-normal">
+                <h1 className="font-basic-sans text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-night leading-[1.1] tracking-normal">
                   Découvrez comment The Bradery a
                   <br />
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-mint via-mint to-periwinkle bg-clip-text text-transparent drop-shadow-sm">
                       multiplié ses avis par 30
                     </span>
-                    <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1.5 sm:h-2 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
+                    <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-1 sm:h-2 bg-gradient-to-r from-mint to-periwinkle rounded-full shadow-lg"></div>
                   </span>
                 </h1>
                 
-                <p className="font-montserrat text-base sm:text-lg lg:text-xl text-night/85 leading-relaxed max-w-2xl font-medium">
+                <p className="font-montserrat text-sm sm:text-lg lg:text-xl text-night/85 leading-relaxed max-w-2xl font-medium">
                   <span className="font-bold text-mint">De 3,4 à 4,6 sur Trustpilot</span> en 30 jours avec notre solution e-réputation
                 </p>
               </div>
 
               {/* Enhanced Metrics - 3 CARDS */}
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in">
-                  <div className="flex items-center space-x-2 mb-1.5">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
-                    <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2.5 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in">
+                  <div className="flex items-center space-x-1.5 sm:space-x-2 mb-1">
+                    <CheckCircle className="w-3 sm:w-5 h-3 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
+                    <span className="font-basic-sans text-lg sm:text-2xl font-bold text-mint">
                       15min
                     </span>
                   </div>
-                  <p className="font-montserrat text-sm text-night/70">d'installation</p>
+                  <p className="font-montserrat text-xs sm:text-sm text-night/70">d'installation</p>
                 </div>
                 
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                  <div className="flex items-center space-x-2 mb-1.5">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
-                    <span className="font-basic-sans text-xl sm:text-2xl font-bold text-mint">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2.5 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                  <div className="flex items-center space-x-1.5 sm:space-x-2 mb-1">
+                    <CheckCircle className="w-3 sm:w-5 h-3 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
+                    <span className="font-basic-sans text-lg sm:text-2xl font-bold text-mint">
                       {animatedNumbers.negatifs}%
                     </span>
                   </div>
-                  <p className="font-montserrat text-sm text-night/70">positifs</p>
+                  <p className="font-montserrat text-xs sm:text-sm text-night/70">positifs</p>
                 </div>
 
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                  <div className="flex items-center space-x-2 mb-1.5">
-                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2.5 sm:p-4 shadow-lg border border-mint/20 hover:shadow-xl transition-all group hover:scale-105 animate-fade-in col-span-2 lg:col-span-1" style={{ animationDelay: '0.3s' }}>
+                  <div className="flex items-center space-x-1.5 sm:space-x-2 mb-1">
+                    <Zap className="w-3 sm:w-5 h-3 sm:h-5 text-mint group-hover:scale-110 transition-transform" />
                     <span className="font-basic-sans text-lg sm:text-xl font-bold text-mint">
                       30j
                     </span>
                   </div>
-                  <p className="font-montserrat text-sm text-night/70">Résultat garantis</p>
+                  <p className="font-montserrat text-xs sm:text-sm text-night/70">Résultat garantis</p>
                 </div>
               </div>
 
               {/* Social Proof Strip */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 pt-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="flex flex-col gap-2 sm:gap-3 pt-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-night/60" />
-                  <span className="font-montserrat text-sm text-night/70">Recommandé par <span className="font-bold text-mint">500+</span> e-commerces</span>
+                  <Users className="w-4 sm:w-5 h-4 sm:h-5 text-night/60" />
+                  <span className="font-montserrat text-xs sm:text-sm text-night/70">Recommandé par <span className="font-bold text-mint">500+</span> e-commerces</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-night/60" />
-                  <span className="font-montserrat text-sm text-night/70"><span className="font-bold text-mint">Satisfait ou remboursé</span></span>
+                  <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 text-night/60" />
+                  <span className="font-montserrat text-xs sm:text-sm text-night/70"><span className="font-bold text-mint">Satisfait ou remboursé</span></span>
                 </div>
               </div>
             </div>
 
             {/* Right side - STUNNING Premium Video Testimonial */}
-            <div className="lg:col-span-1 relative animate-slide-up order-first lg:order-last">
+            <div className="lg:col-span-1 relative animate-slide-up order-first lg:order-last mt-4 lg:mt-0">
               <div className="relative flex justify-center">
-                {/* Hero video container - OPTIMIZED FOR ABOVE FOLD */}
-                <div className="relative group w-full max-w-[650px] lg:max-w-[700px]">
-                  {/* Premium glow effect - REDUCED */}
-                  <div className="absolute -inset-6 bg-gradient-to-r from-white/30 via-mint/20 to-periwinkle/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
+                {/* Hero video container - MOBILE OPTIMIZED */}
+                <div className="relative group w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[650px] xl:max-w-[700px]">
+                  {/* Premium glow effect - REDUCED FOR MOBILE */}
+                  <div className="absolute -inset-3 sm:-inset-6 bg-gradient-to-r from-white/30 via-mint/20 to-periwinkle/20 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
                   
-                  {/* Main video container - PREMIUM STYLING */}
-                  <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 group-hover:scale-[1.01] transition-all duration-700" style={{
-                    boxShadow: '0 30px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.8), inset 0 1px 0 rgba(255,255,255,0.9)'
+                  {/* Main video container - MOBILE RESPONSIVE */}
+                  <div className="relative w-full aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-white to-isabelline/50 group-hover:scale-[1.01] transition-all duration-700" style={{
+                    boxShadow: '0 15px 30px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.8), inset 0 1px 0 rgba(255,255,255,0.9)'
                   }}>
                     
                     {/* YouTube iframe */}
                     <iframe
-                      className="w-full h-full rounded-3xl"
+                      className="w-full h-full rounded-2xl sm:rounded-3xl"
                       src={`https://www.youtube.com/embed/n44Z4HDah7o?autoplay=1&mute=${isMobile ? '1' : '0'}&loop=1&playlist=n44Z4HDah7o&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&playsinline=1&showinfo=0`}
                       title="Témoignage The Bradery"
                       frameBorder="0"
@@ -210,18 +210,18 @@ const HeroSection = () => {
                         iframe.src = iframe.src.replace('controls=1', 'controls=0');
                       }}
                       style={{ 
-                        borderRadius: '1.5rem'
+                        borderRadius: window.innerWidth < 640 ? '1rem' : '1.5rem'
                       }}
                     ></iframe>
 
-                    {/* PREMIUM CUSTOM PLAY BUTTON OVERLAY */}
+                    {/* PREMIUM CUSTOM PLAY BUTTON OVERLAY - MOBILE OPTIMIZED */}
                     {showPlayButton && (
                       <div 
-                        className="absolute inset-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 bg-black/20 rounded-3xl cursor-pointer z-10"
+                        className="absolute inset-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 bg-black/20 rounded-2xl sm:rounded-3xl cursor-pointer z-10"
                         onClick={handlePlayVideo}
                       >
-                        <div className="bg-white/15 backdrop-blur-sm rounded-full p-8 border border-white/30 hover:scale-110 transition-transform duration-300 shadow-2xl">
-                          <PlayCircle className="w-20 h-20 text-white drop-shadow-2xl" />
+                        <div className="bg-white/15 backdrop-blur-sm rounded-full p-4 sm:p-8 border border-white/30 hover:scale-110 transition-transform duration-300 shadow-2xl">
+                          <PlayCircle className="w-12 sm:w-20 h-12 sm:h-20 text-white drop-shadow-2xl" />
                         </div>
                       </div>
                     )}
